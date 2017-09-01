@@ -5,5 +5,5 @@
     [direccion] NVARCHAR(MAX) NULL, 
     [fecha] NVARCHAR(MAX) NULL, 
     [descripcion] TEXT NULL, 
-    [foto] IMAGE NULL
+    [foto] IMAGE NULL,
 )
