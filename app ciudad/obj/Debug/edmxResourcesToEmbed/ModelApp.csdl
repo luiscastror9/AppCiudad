@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A2A1B8_lamarqueBDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="eventos">
+    <Key>
+      <PropertyRef Name="Eventos1" />
+    </Key>
+    <Property Name="Eventos1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="fecha" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="direccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="mapa">
+    <Key>
+      <PropertyRef Name="mapa1" />
+    </Key>
+    <Property Name="mapa1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="latitud" Type="Int32" />
+    <Property Name="longitud" Type="Int32" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="reclamos">
+    <Key>
+      <PropertyRef Name="Reclamos1" />
+    </Key>
+    <Property Name="Reclamos1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="usuario" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="direccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="fecha" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="registro">
+    <Key>
+      <PropertyRef Name="Registro1" />
+    </Key>
+    <Property Name="Registro1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="usuario" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="contraseña" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="apellido" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sugerencia">
+    <Key>
+      <PropertyRef Name="Sugerencias" />
+    </Key>
+    <Property Name="Sugerencias" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="DB_A2A1B8_lamarqueBDEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="eventos" EntityType="Self.eventos" />
+    <EntitySet Name="mapa" EntityType="Self.mapa" />
+    <EntitySet Name="reclamos" EntityType="Self.reclamos" />
+    <EntitySet Name="registro" EntityType="Self.registro" />
+    <EntitySet Name="sugerencia" EntityType="Self.sugerencia" />
+  </EntityContainer>
+</Schema>

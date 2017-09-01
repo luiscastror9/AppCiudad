@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_A2A1B8_lamarqueBDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="eventos">
+          <Key>
+            <PropertyRef Name="Eventos" />
+          </Key>
+          <Property Name="Eventos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar(max)" />
+          <Property Name="fecha" Type="nvarchar(max)" />
+          <Property Name="direccion" Type="nvarchar(max)" />
+          <Property Name="descripcion" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="mapa">
+          <Key>
+            <PropertyRef Name="mapa" />
+          </Key>
+          <Property Name="mapa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar(max)" />
+          <Property Name="latitud" Type="int" />
+          <Property Name="longitud" Type="int" />
+          <Property Name="descripcion" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="reclamos">
+          <Key>
+            <PropertyRef Name="Reclamos" />
+          </Key>
+          <Property Name="Reclamos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="usuario" Type="nvarchar(max)" />
+          <Property Name="direccion" Type="nvarchar(max)" />
+          <Property Name="fecha" Type="nvarchar(max)" />
+          <Property Name="descripcion" Type="text" />
+          <Property Name="foto" Type="image" />
+        </EntityType>
+        <EntityType Name="registro">
+          <Key>
+            <PropertyRef Name="Registro" />
+          </Key>
+          <Property Name="Registro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="usuario" Type="nvarchar(max)" />
+          <Property Name="contraseña" Type="nvarchar(max)" />
+          <Property Name="nombre" Type="nvarchar(max)" />
+          <Property Name="apellido" Type="nvarchar(max)" />
+          <Property Name="email" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="sugerencia">
+          <Key>
+            <PropertyRef Name="Sugerencias" />
+          </Key>
+          <Property Name="Sugerencias" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="descripcion" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="DB_A2A1B8_lamarqueBDModelStoreContainer">
+          <EntitySet Name="eventos" EntityType="Self.eventos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mapa" EntityType="Self.mapa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="reclamos" EntityType="Self.reclamos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="registro" EntityType="Self.registro" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sugerencia" EntityType="Self.sugerencia" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_A2A1B8_lamarqueBDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="eventos">
+          <Key>
+            <PropertyRef Name="Eventos1" />
+          </Key>
+          <Property Name="Eventos1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fecha" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="direccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="mapa">
+          <Key>
+            <PropertyRef Name="mapa1" />
+          </Key>
+          <Property Name="mapa1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="latitud" Type="Int32" />
+          <Property Name="longitud" Type="Int32" />
+          <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="reclamos">
+          <Key>
+            <PropertyRef Name="Reclamos1" />
+          </Key>
+          <Property Name="Reclamos1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="usuario" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="direccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fecha" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="registro">
+          <Key>
+            <PropertyRef Name="Registro1" />
+          </Key>
+          <Property Name="Registro1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="usuario" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="contraseña" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="apellido" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="sugerencia">
+          <Key>
+            <PropertyRef Name="Sugerencias" />
+          </Key>
+          <Property Name="Sugerencias" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="DB_A2A1B8_lamarqueBDEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="eventos" EntityType="Self.eventos" />
+          <EntitySet Name="mapa" EntityType="Self.mapa" />
+          <EntitySet Name="reclamos" EntityType="Self.reclamos" />
+          <EntitySet Name="registro" EntityType="Self.registro" />
+          <EntitySet Name="sugerencia" EntityType="Self.sugerencia" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_A2A1B8_lamarqueBDModelStoreContainer" CdmEntityContainer="DB_A2A1B8_lamarqueBDEntities">
+          <EntitySetMapping Name="eventos">
+            <EntityTypeMapping TypeName="DB_A2A1B8_lamarqueBDModel.eventos">
+              <MappingFragment StoreEntitySet="eventos">
+                <ScalarProperty Name="Eventos1" ColumnName="Eventos" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mapa">
+            <EntityTypeMapping TypeName="DB_A2A1B8_lamarqueBDModel.mapa">
+              <MappingFragment StoreEntitySet="mapa">
+                <ScalarProperty Name="mapa1" ColumnName="mapa" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="latitud" ColumnName="latitud" />
+                <ScalarProperty Name="longitud" ColumnName="longitud" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="reclamos">
+            <EntityTypeMapping TypeName="DB_A2A1B8_lamarqueBDModel.reclamos">
+              <MappingFragment StoreEntitySet="reclamos">
+                <ScalarProperty Name="Reclamos1" ColumnName="Reclamos" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="foto" ColumnName="foto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="registro">
+            <EntityTypeMapping TypeName="DB_A2A1B8_lamarqueBDModel.registro">
+              <MappingFragment StoreEntitySet="registro">
+                <ScalarProperty Name="Registro1" ColumnName="Registro" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellido" ColumnName="apellido" />
+                <ScalarProperty Name="email" ColumnName="email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sugerencia">
+            <EntityTypeMapping TypeName="DB_A2A1B8_lamarqueBDModel.sugerencia">
+              <MappingFragment StoreEntitySet="sugerencia">
+                <ScalarProperty Name="Sugerencias" ColumnName="Sugerencias" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
