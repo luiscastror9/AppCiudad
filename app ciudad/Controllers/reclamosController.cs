@@ -11,17 +11,17 @@ using app_ciudad;
 
 namespace app_ciudad.Controllers
 {
-    public class reclamosController : Controller
+    public class ReclamosController : Controller
     {
         private DB_A2A1B8_lamarqueBDEntities db = new DB_A2A1B8_lamarqueBDEntities();
 
-        // GET: reclamos
+        // GET: Reclamos
         public async Task<ActionResult> Index()
         {
             return View(await db.reclamos.ToListAsync());
         }
 
-        // GET: reclamos/Details/5
+        // GET: Reclamos/Details/5
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
@@ -36,13 +36,13 @@ namespace app_ciudad.Controllers
             return View(reclamos);
         }
 
-        // GET: reclamos/Create
+        // GET: Reclamos/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: reclamos/Create
+        // POST: Reclamos/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -59,7 +59,7 @@ namespace app_ciudad.Controllers
             return View(reclamos);
         }
 
-        // GET: reclamos/Edit/5
+        // GET: Reclamos/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -74,7 +74,7 @@ namespace app_ciudad.Controllers
             return View(reclamos);
         }
 
-        // POST: reclamos/Edit/5
+        // POST: Reclamos/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -90,7 +90,7 @@ namespace app_ciudad.Controllers
             return View(reclamos);
         }
 
-        // GET: reclamos/Delete/5
+        // GET: Reclamos/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
@@ -105,7 +105,7 @@ namespace app_ciudad.Controllers
             return View(reclamos);
         }
 
-        // POST: reclamos/Delete/5
+        // POST: Reclamos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)

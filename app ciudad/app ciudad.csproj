@@ -196,13 +196,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\eventosController.cs" />
+    <Compile Include="Controllers\EventosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\mapasController.cs" />
-    <Compile Include="Controllers\reclamosController.cs" />
-    <Compile Include="Controllers\registroesController.cs" />
-    <Compile Include="Controllers\sugerenciasController.cs" />
+    <Compile Include="Controllers\MapaController.cs" />
+    <Compile Include="Controllers\ReclamosController.cs" />
+    <Compile Include="Controllers\RegistroController.cs" />
+    <Compile Include="Controllers\SugerenciasController.cs" />
     <Compile Include="eventos.cs">
       <DependentUpon>ModelApp.tt</DependentUpon>
     </Compile>
@@ -247,6 +247,11 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\featured_slide.css" />
+    <Content Include="Content\forms.css" />
+    <Content Include="Content\layout.css" />
+    <Content Include="Content\navi.css" />
+    <Content Include="Content\tables.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -262,6 +267,24 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="images\demo\1.gif" />
+    <Content Include="images\demo\2.gif" />
+    <Content Include="images\demo\3.gif" />
+    <Content Include="images\demo\60x60.gif" />
+    <Content Include="images\demo\avatar.gif" />
+    <Content Include="images\demo\entrada lamarque.jpg" />
+    <Content Include="images\demo\imgc.gif" />
+    <Content Include="images\demo\imgc2.gif" />
+    <Content Include="images\demo\imgc3.gif" />
+    <Content Include="images\demo\imgl.gif" />
+    <Content Include="images\demo\imgl2.gif" />
+    <Content Include="images\demo\imgl3.gif" />
+    <Content Include="images\demo\imgl4.gif" />
+    <Content Include="images\demo\imgr.gif" />
+    <Content Include="images\demo\imgr2.gif" />
+    <Content Include="images\demo\index.html" />
+    <Content Include="images\next.png" />
+    <Content Include="images\prev.png" />
     <Content Include="ModelApp.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelApp.edmx</DependentUpon>
@@ -289,6 +312,9 @@
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.jcarousel.pack.js" />
+    <Content Include="Scripts\jquery.jcarousel.setup.js" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -357,6 +383,17 @@
     <Content Include="Views\sugerencias\Details.cshtml" />
     <Content Include="Views\sugerencias\Edit.cshtml" />
     <Content Include="Views\sugerencias\Index.cshtml" />
+    <Content Include="Views\Home\Historia.cshtml" />
+    <Content Include="Views\Registro\Create.cshtml" />
+    <Content Include="Views\Registro\Delete.cshtml" />
+    <Content Include="Views\Registro\Details.cshtml" />
+    <Content Include="Views\Registro\Edit.cshtml" />
+    <Content Include="Views\Registro\Index.cshtml" />
+    <Content Include="Views\Mapa\Create.cshtml" />
+    <Content Include="Views\Mapa\Delete.cshtml" />
+    <Content Include="Views\Mapa\Details.cshtml" />
+    <Content Include="Views\Mapa\Edit.cshtml" />
+    <Content Include="Views\Mapa\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

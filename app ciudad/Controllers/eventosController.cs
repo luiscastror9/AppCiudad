@@ -11,17 +11,17 @@ using app_ciudad;
 
 namespace app_ciudad.Controllers
 {
-    public class eventosController : Controller
+    public class EventosController : Controller
     {
         private DB_A2A1B8_lamarqueBDEntities db = new DB_A2A1B8_lamarqueBDEntities();
 
-        // GET: eventos
+        // GET: Eventos
         public async Task<ActionResult> Index()
         {
             return View(await db.eventos.ToListAsync());
         }
 
-        // GET: eventos/Details/5
+        // GET: Eventos/Details/5
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
@@ -36,13 +36,13 @@ namespace app_ciudad.Controllers
             return View(eventos);
         }
 
-        // GET: eventos/Create
+        // GET: Eventos/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: eventos/Create
+        // POST: Eventos/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -59,7 +59,7 @@ namespace app_ciudad.Controllers
             return View(eventos);
         }
 
-        // GET: eventos/Edit/5
+        // GET: Eventos/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -74,7 +74,7 @@ namespace app_ciudad.Controllers
             return View(eventos);
         }
 
-        // POST: eventos/Edit/5
+        // POST: Eventos/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -90,7 +90,7 @@ namespace app_ciudad.Controllers
             return View(eventos);
         }
 
-        // GET: eventos/Delete/5
+        // GET: Eventos/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
@@ -105,7 +105,7 @@ namespace app_ciudad.Controllers
             return View(eventos);
         }
 
-        // POST: eventos/Delete/5
+        // POST: Eventos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)

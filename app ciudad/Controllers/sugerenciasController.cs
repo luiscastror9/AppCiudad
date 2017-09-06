@@ -11,17 +11,17 @@ using app_ciudad;
 
 namespace app_ciudad.Controllers
 {
-    public class sugerenciasController : Controller
+    public class SugerenciasController : Controller
     {
         private DB_A2A1B8_lamarqueBDEntities db = new DB_A2A1B8_lamarqueBDEntities();
 
-        // GET: sugerencias
+        // GET: Sugerencias
         public async Task<ActionResult> Index()
         {
             return View(await db.sugerencia.ToListAsync());
         }
 
-        // GET: sugerencias/Details/5
+        // GET: Sugerencias/Details/5
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
@@ -36,13 +36,13 @@ namespace app_ciudad.Controllers
             return View(sugerencia);
         }
 
-        // GET: sugerencias/Create
+        // GET: Sugerencias/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: sugerencias/Create
+        // POST: Sugerencias/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -59,7 +59,7 @@ namespace app_ciudad.Controllers
             return View(sugerencia);
         }
 
-        // GET: sugerencias/Edit/5
+        // GET: Sugerencias/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -74,7 +74,7 @@ namespace app_ciudad.Controllers
             return View(sugerencia);
         }
 
-        // POST: sugerencias/Edit/5
+        // POST: Sugerencias/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -90,7 +90,7 @@ namespace app_ciudad.Controllers
             return View(sugerencia);
         }
 
-        // GET: sugerencias/Delete/5
+        // GET: Sugerencias/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
@@ -105,7 +105,7 @@ namespace app_ciudad.Controllers
             return View(sugerencia);
         }
 
-        // POST: sugerencias/Delete/5
+        // POST: Sugerencias/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
