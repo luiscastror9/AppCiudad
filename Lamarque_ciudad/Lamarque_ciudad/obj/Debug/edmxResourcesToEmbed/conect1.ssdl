@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A2A1B8_netbd1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DB_A2A1B8_netbd1.dbo.complain_bd' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="complain_bd">
+    <Key>
+      <PropertyRef Name="user" />
+      <PropertyRef Name="desc" />
+      <PropertyRef Name="day" />
+    </Key>
+    <Property Name="user" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="photo" Type="image" />
+    <Property Name="adr" Type="nchar" MaxLength="10" />
+    <Property Name="desc" Type="nchar" MaxLength="400" Nullable="false" />
+    <Property Name="day" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DB_A2A1B8_netbd1.dbo.map' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="map">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="lat" />
+      <PropertyRef Name="leng" />
+    </Key>
+    <Property Name="name" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="lat" Type="int" Nullable="false" />
+    <Property Name="leng" Type="int" Nullable="false" />
+    <Property Name="desc" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DB_A2A1B8_netbd1.dbo.people_bd' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="people_bd">
+    <Key>
+      <PropertyRef Name="user" />
+      <PropertyRef Name="pass" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="lastname" />
+      <PropertyRef Name="birth" />
+      <PropertyRef Name="mail" />
+    </Key>
+    <Property Name="user" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="photo" Type="image" />
+    <Property Name="pass" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="name" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="lastname" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="birth" Type="date" Nullable="false" />
+    <Property Name="mail" Type="nchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DB_A2A1B8_netbd1.dbo.sug' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="sug">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="desc" />
+    </Key>
+    <Property Name="name" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="desc" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DB_A2A1B8_netbd1ModelStoreContainer">
+    <EntitySet Name="complain_bd" EntityType="Self.complain_bd" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [complain_bd].[user] AS [user], 
+    [complain_bd].[photo] AS [photo], 
+    [complain_bd].[adr] AS [adr], 
+    [complain_bd].[desc] AS [desc], 
+    [complain_bd].[day] AS [day]
+    FROM [dbo].[complain_bd] AS [complain_bd]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="map" EntityType="Self.map" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [map].[name] AS [name], 
+    [map].[lat] AS [lat], 
+    [map].[leng] AS [leng], 
+    [map].[desc] AS [desc]
+    FROM [dbo].[map] AS [map]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="people_bd" EntityType="Self.people_bd" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [people_bd].[user] AS [user], 
+    [people_bd].[photo] AS [photo], 
+    [people_bd].[pass] AS [pass], 
+    [people_bd].[name] AS [name], 
+    [people_bd].[lastname] AS [lastname], 
+    [people_bd].[birth] AS [birth], 
+    [people_bd].[mail] AS [mail]
+    FROM [dbo].[people_bd] AS [people_bd]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="sug" EntityType="Self.sug" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [sug].[name] AS [name], 
+    [sug].[desc] AS [desc]
+    FROM [dbo].[sug] AS [sug]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_A2A1B8_netbd1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DB_A2A1B8_netbd1.dbo.complain_bd' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="complain_bd">
+          <Key>
+            <PropertyRef Name="user" />
+            <PropertyRef Name="desc" />
+            <PropertyRef Name="day" />
+          </Key>
+          <Property Name="user" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="photo" Type="image" />
+          <Property Name="adr" Type="nchar" MaxLength="10" />
+          <Property Name="desc" Type="nchar" MaxLength="400" Nullable="false" />
+          <Property Name="day" Type="date" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DB_A2A1B8_netbd1.dbo.map' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="map">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="lat" />
+            <PropertyRef Name="leng" />
+          </Key>
+          <Property Name="name" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="lat" Type="int" Nullable="false" />
+          <Property Name="leng" Type="int" Nullable="false" />
+          <Property Name="desc" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DB_A2A1B8_netbd1.dbo.people_bd' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="people_bd">
+          <Key>
+            <PropertyRef Name="user" />
+            <PropertyRef Name="pass" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="lastname" />
+            <PropertyRef Name="birth" />
+            <PropertyRef Name="mail" />
+          </Key>
+          <Property Name="user" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="photo" Type="image" />
+          <Property Name="pass" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="name" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="lastname" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="birth" Type="date" Nullable="false" />
+          <Property Name="mail" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DB_A2A1B8_netbd1.dbo.sug' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="sug">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="desc" />
+          </Key>
+          <Property Name="name" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="desc" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DB_A2A1B8_netbd1ModelStoreContainer">
+          <EntitySet Name="complain_bd" EntityType="Self.complain_bd" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [complain_bd].[user] AS [user], 
+    [complain_bd].[photo] AS [photo], 
+    [complain_bd].[adr] AS [adr], 
+    [complain_bd].[desc] AS [desc], 
+    [complain_bd].[day] AS [day]
+    FROM [dbo].[complain_bd] AS [complain_bd]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="map" EntityType="Self.map" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [map].[name] AS [name], 
+    [map].[lat] AS [lat], 
+    [map].[leng] AS [leng], 
+    [map].[desc] AS [desc]
+    FROM [dbo].[map] AS [map]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="people_bd" EntityType="Self.people_bd" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [people_bd].[user] AS [user], 
+    [people_bd].[photo] AS [photo], 
+    [people_bd].[pass] AS [pass], 
+    [people_bd].[name] AS [name], 
+    [people_bd].[lastname] AS [lastname], 
+    [people_bd].[birth] AS [birth], 
+    [people_bd].[mail] AS [mail]
+    FROM [dbo].[people_bd] AS [people_bd]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="sug" EntityType="Self.sug" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [sug].[name] AS [name], 
+    [sug].[desc] AS [desc]
+    FROM [dbo].[sug] AS [sug]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_A2A1B8_netbd1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="complain_bd">
+          <Key>
+            <PropertyRef Name="user" />
+            <PropertyRef Name="desc" />
+            <PropertyRef Name="day" />
+          </Key>
+          <Property Name="user" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="adr" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="desc" Type="String" MaxLength="400" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="day" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="map">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="lat" />
+            <PropertyRef Name="leng" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="lat" Type="Int32" Nullable="false" />
+          <Property Name="leng" Type="Int32" Nullable="false" />
+          <Property Name="desc" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="people_bd">
+          <Key>
+            <PropertyRef Name="user" />
+            <PropertyRef Name="pass" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="lastname" />
+            <PropertyRef Name="birth" />
+            <PropertyRef Name="mail" />
+          </Key>
+          <Property Name="user" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="pass" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="lastname" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="birth" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="mail" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sug">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="desc" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="desc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DB_A2A1B8_netbd1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="complain_bd" EntityType="Self.complain_bd" />
+          <EntitySet Name="map" EntityType="Self.map" />
+          <EntitySet Name="people_bd" EntityType="Self.people_bd" />
+          <EntitySet Name="sug" EntityType="Self.sug" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_A2A1B8_netbd1ModelStoreContainer" CdmEntityContainer="DB_A2A1B8_netbd1Entities">
+          <EntitySetMapping Name="complain_bd">
+            <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.complain_bd">
+              <MappingFragment StoreEntitySet="complain_bd">
+                <ScalarProperty Name="user" ColumnName="user" />
+                <ScalarProperty Name="photo" ColumnName="photo" />
+                <ScalarProperty Name="adr" ColumnName="adr" />
+                <ScalarProperty Name="desc" ColumnName="desc" />
+                <ScalarProperty Name="day" ColumnName="day" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="map">
+            <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.map">
+              <MappingFragment StoreEntitySet="map">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="leng" ColumnName="leng" />
+                <ScalarProperty Name="desc" ColumnName="desc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="people_bd">
+            <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.people_bd">
+              <MappingFragment StoreEntitySet="people_bd">
+                <ScalarProperty Name="user" ColumnName="user" />
+                <ScalarProperty Name="photo" ColumnName="photo" />
+                <ScalarProperty Name="pass" ColumnName="pass" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="birth" ColumnName="birth" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sug">
+            <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.sug">
+              <MappingFragment StoreEntitySet="sug">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="desc" ColumnName="desc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

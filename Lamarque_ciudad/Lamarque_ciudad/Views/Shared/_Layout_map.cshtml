@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamarque - @ViewBag.Title</title>
+    @Styles.Render("~/Content/styles-nav.css") 
+    @Styles.Render("~/Content/styles-map.css")
+</head>
+<body>
+    <header>
+        <div class="sesion">
+            <from class="box">
+                <p>Usuario</p><input type="text" name="usuario" />
+                <p> Contraseña</p><input type="text" name="pass" />
+                <br />
+                <a href="#">¿Olvidaste la contraseña?</a><br /><br />
+                <button>Entrar</button>&nbsp;<button>Sign Up</button>
+            </from>
+        </div>
+        <div class="wrapper">
+            <div class="logo">
+                Lamarque, Río Negro.
+            </div>
+            <nav>
+                <a href="~/Views/Home/Index.cshtml">Inicio</a>
+                <a href="~/Views/Home/Historia.cshtml">Historia</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="mapa.html">Mapa</a>
+                <a href="sugerencias.html">Sugerencias</a>
+                <a href="reclamos.html">Reclamos</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="pie">
+                <p> Diseño por ### </p>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/script-nav.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
