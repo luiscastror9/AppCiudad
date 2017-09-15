@@ -1,26 +1,24 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lamarque - @ViewBag.Title</title>
     @Styles.Render("~/Content/styles-nav.css")
+    @Styles.Render("~/Content/styles-historia.css")
+    @Styles.Render("~/Content/styles-servicios.css")
+    @Styles.Render("~/Content/styles-map.css")
+    @Styles.Render("~/Content/styles-servicios.css")
+    @Styles.Render("~/Content/styles-sugerencias.css")
+    @Styles.Render("~/Content/styles-home.css")
+    @Styles.Render("~/Content/styles-input.css")
 </head>
 <body>
     <header>
-        <div class="sesion">
-            <from class="box">
-                <p>Usuario</p><input type="text" name="usuario" />
-                <p> Contraseña</p><input type="text" name="pass" />
-                <br/>
-                <a href="#">¿Olvidaste la contraseña?</a><br/><br/>
-                <button>Entrar</button>&nbsp;<button>Sign Up</button>
-            </from>
-        </div>
         <div class="wrapper">
             <div class="logo">
-                Lamarque, Río Negro.
+                Municipalidad de Lamarque
             </div>
             <nav>
                 <a href="~/Home/Index">Inicio</a>

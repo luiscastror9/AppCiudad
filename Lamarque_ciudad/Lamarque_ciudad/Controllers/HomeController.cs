@@ -16,7 +16,10 @@ namespace Lamarque_ciudad.Controllers
         {
             return View();
         }
-
+        public ActionResult Servicios()
+        {
+            return View();
+        }
 
     }
 }

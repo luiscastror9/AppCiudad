@@ -18,7 +18,8 @@ namespace Lamarque_ciudad.Controllers
         // GET: sugs
         public async Task<ActionResult> Index()
         {
-            return View(await db.sug.ToListAsync());
+            return View("Create");
+            //return View(await db.sug.ToListAsync());
         }
 
         // GET: sugs/Details/5

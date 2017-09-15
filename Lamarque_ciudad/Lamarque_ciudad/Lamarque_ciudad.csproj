@@ -217,7 +217,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -275,7 +274,6 @@
     <Content Include="Views\sugs\Details.cshtml" />
     <Content Include="Views\sugs\Edit.cshtml" />
     <Content Include="Views\sugs\Index.cshtml" />
-    <Content Include="Views\Shared\_Layout_map.cshtml" />
     <Content Include="Views\Home\Servicios.cshtml" />
   </ItemGroup>
   <ItemGroup>

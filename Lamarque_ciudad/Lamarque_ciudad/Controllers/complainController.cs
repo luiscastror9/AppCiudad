@@ -18,7 +18,8 @@ namespace Lamarque_ciudad.Controllers
         // GET: complain
         public async Task<ActionResult> Index()
         {
-            return View(await db.complain_bd.ToListAsync());
+            return View("Create");
+            //return View(await db.complain_bd.ToListAsync());
         }
 
         // GET: complain/Details/5
