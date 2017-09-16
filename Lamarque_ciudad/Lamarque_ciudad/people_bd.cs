@@ -15,11 +15,11 @@ namespace Lamarque_ciudad
     public partial class people_bd
     {
         public string user { get; set; }
-        public byte[] photo { get; set; }
         public string pass { get; set; }
         public string name { get; set; }
         public string lastname { get; set; }
         public System.DateTime birth { get; set; }
         public string mail { get; set; }
+        public int id { get; set; }
     }
 }

@@ -18,5 +18,6 @@ namespace Lamarque_ciudad
         public int lat { get; set; }
         public int leng { get; set; }
         public string desc { get; set; }
+        public int id { get; set; }
     }
 }

@@ -15,9 +15,9 @@ namespace Lamarque_ciudad
     public partial class complain_bd
     {
         public string user { get; set; }
-        public byte[] photo { get; set; }
         public string adr { get; set; }
         public string desc { get; set; }
         public System.DateTime day { get; set; }
+        public int id { get; set; }
     }
 }

@@ -4,8 +4,8 @@
     <EntitySetMapping Name="complain_bd">
       <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.complain_bd">
         <MappingFragment StoreEntitySet="complain_bd">
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="user" ColumnName="user" />
-          <ScalarProperty Name="photo" ColumnName="photo" />
           <ScalarProperty Name="adr" ColumnName="adr" />
           <ScalarProperty Name="desc" ColumnName="desc" />
           <ScalarProperty Name="day" ColumnName="day" />
@@ -15,6 +15,7 @@
     <EntitySetMapping Name="map">
       <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.map">
         <MappingFragment StoreEntitySet="map">
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="lat" ColumnName="lat" />
           <ScalarProperty Name="leng" ColumnName="leng" />
@@ -25,8 +26,8 @@
     <EntitySetMapping Name="people_bd">
       <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.people_bd">
         <MappingFragment StoreEntitySet="people_bd">
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="user" ColumnName="user" />
-          <ScalarProperty Name="photo" ColumnName="photo" />
           <ScalarProperty Name="pass" ColumnName="pass" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="lastname" ColumnName="lastname" />
@@ -38,6 +39,7 @@
     <EntitySetMapping Name="sug">
       <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.sug">
         <MappingFragment StoreEntitySet="sug">
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="desc" ColumnName="desc" />
         </MappingFragment>
