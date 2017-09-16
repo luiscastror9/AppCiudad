@@ -230,3 +230,4 @@ C:\Users\Flavia\Desktop\Curso .NET\AppCiudad\Lamarque_ciudad\Lamarque_ciudad\bin
 C:\Users\Flavia\Desktop\Curso .NET\AppCiudad\Lamarque_ciudad\Lamarque_ciudad\obj\Debug\Lamarque_ciudad.csproj.CoreCompileInputs.cache
 C:\Users\Flavia\Desktop\Curso .NET\AppCiudad\Lamarque_ciudad\Lamarque_ciudad\obj\Debug\Lamarque_ciudad.dll
 C:\Users\Flavia\Desktop\Curso .NET\AppCiudad\Lamarque_ciudad\Lamarque_ciudad\obj\Debug\Lamarque_ciudad.pdb
+C:\Users\Flavia\Desktop\Curso .NET\AppCiudad\Lamarque_ciudad\Lamarque_ciudad\obj\Debug\Lamarque_ciudad.csprojResolveAssemblyReference.cache
