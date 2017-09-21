@@ -9,6 +9,7 @@
         <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.map" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.people_bd" Width="1.5" PointX="6.625" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.sug" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.eventos_bd" Width="1.5" PointX="8.5" PointY="0.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
