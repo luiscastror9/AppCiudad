@@ -15,6 +15,15 @@
           <Property Name="day" Type="date" Nullable="false" />
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
+        <EntityType Name="eventos_bd">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="descripcion" Type="nvarchar(max)" />
+          <Property Name="startDate" Type="datetime" />
+          <Property Name="endDate" Type="date" />
+        </EntityType>
         <EntityType Name="map">
           <Key>
             <PropertyRef Name="id" />
@@ -47,6 +56,7 @@
         </EntityType>
         <EntityContainer Name="DB_A2A1B8_netbd1ModelStoreContainer">
           <EntitySet Name="complain_bd" EntityType="Self.complain_bd" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="eventos_bd" EntityType="Self.eventos_bd" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="map" EntityType="Self.map" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="people_bd" EntityType="Self.people_bd" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sug" EntityType="Self.sug" Schema="dbo" store:Type="Tables" />
@@ -82,7 +92,7 @@
           <Property Name="user" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="pass" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="lastname" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="lastName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="birth" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="mail" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
@@ -100,7 +110,17 @@
           <EntitySet Name="map" EntityType="Self.map" />
           <EntitySet Name="people_bd" EntityType="Self.people_bd" />
           <EntitySet Name="sug" EntityType="Self.sug" />
+          <EntitySet Name="eventos_bd" EntityType="DB_A2A1B8_netbd1Model.eventos_bd" />
         </EntityContainer>
+        <EntityType Name="eventos_bd">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="startDate" Type="DateTime" Precision="3" />
+          <Property Name="endDate" Type="DateTime" Precision="0" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -136,7 +156,7 @@
                 <ScalarProperty Name="user" ColumnName="user" />
                 <ScalarProperty Name="pass" ColumnName="pass" />
                 <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="lastName" ColumnName="lastname" />
                 <ScalarProperty Name="birth" ColumnName="birth" />
                 <ScalarProperty Name="mail" ColumnName="mail" />
               </MappingFragment>
@@ -148,6 +168,16 @@
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="desc" ColumnName="desc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="eventos_bd">
+            <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.eventos_bd">
+              <MappingFragment StoreEntitySet="eventos_bd">
+                <ScalarProperty Name="endDate" ColumnName="endDate" />
+                <ScalarProperty Name="startDate" ColumnName="startDate" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -21,5 +21,9 @@ namespace Lamarque_ciudad.Controllers
             return View();
         }
 
+        public ActionResult eventos_bd()
+        {
+            return View();
+        }
     }
 }
