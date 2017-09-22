@@ -5,7 +5,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Reclamos</h2>
+<main>
+    <article>
 
 @using (Html.BeginForm("Create","complain",FormMethod.Post) ) 
 {
@@ -52,3 +53,5 @@
         </div>
     </div>
 }
+    </article>
+    </main>

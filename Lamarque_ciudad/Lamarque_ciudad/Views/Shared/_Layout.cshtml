@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lamarque - @ViewBag.Title</title>
-    @Styles.Render("~/Content/styles-nav.css")
     @Styles.Render("~/Content/styles-historia.css")
     @Styles.Render("~/Content/styles-servicios.css")
     @Styles.Render("~/Content/styles-map.css")
@@ -13,36 +12,38 @@
     @Styles.Render("~/Content/styles-sugerencias.css")
     @Styles.Render("~/Content/styles-home.css")
     @Styles.Render("~/Content/styles-input.css")
+    @Styles.Render("~/Content/styles-menu.css")
+    @Styles.Render("~/Content/font-awesome.min.css")
+    @Styles.Render("~/Content/font-awesome.css")
+    @Styles.Render("~/Content/styles-historia.css")
 </head>
 <body>
-    <header>
-        <div class="wrapper">
+    <header id="header">
+        <nav class="menu">
             <div class="logo">
-                Municipalidad de Lamarque
+                <a href="~/Home/Index"><h1>Municipalidad de Lamarque</h1></a>
+                <a href="#" class="btn-menu" id="btn-menu"><i class="icono fa fa-bars" aria-hidden="true"></i></a>
             </div>
-            <nav>
-                <a href="~/Home/Index">Inicio</a>
+            <div class="enlaces" id="enlaces">
                 <a href="~/Home/Historia">Historia</a>
+                <a href="~/Home/#">Eventos</a>
                 <a href="~/Home/servicios">Servicios</a>
                 <a href="~/maps/Index">Mapa</a>
-                <a href="~/sugs/Index">Sugerencias</a>
-                <a href="~/complain/">Reclamos</a>
-            </nav>
-        </div>
+                <a href="~/sugs/Create">Sugerencias</a>
+                <a href="~/users/login">Usuarios</a>
+            </div>
+        </nav>
     </header>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <div class="pie">
-                <p> Diseño por ### </p>
-            </div>
-        </footer>
+
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/Scripts/script-nav.js")
+    @Scripts.Render("~/Scripts/jquery-1.10.2.min.js")
+    @Scripts.Render("~/Scripts/headroom.min.js")
+    @Scripts.Render("~/Scripts/menu.js")
     @RenderSection("scripts", required: false)
 </body>
 </html>

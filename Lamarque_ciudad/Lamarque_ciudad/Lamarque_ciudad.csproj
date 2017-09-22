@@ -171,8 +171,8 @@
     <Compile Include="Controllers\complainController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\mapsController.cs" />
-    <Compile Include="Controllers\peopleController.cs" />
     <Compile Include="Controllers\sugsController.cs" />
+    <Compile Include="Controllers\usersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -200,6 +200,8 @@
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\Imagenes\historia\imgl.gif" />
     <Content Include="Content\Imagenes\historia\imgl3.gif" />
     <Content Include="Content\Imagenes\historia\imgl4.gif" />
@@ -211,10 +213,11 @@
     <Content Include="Content\styles-historia.css" />
     <Content Include="Content\styles-home.css" />
     <Content Include="Content\styles-input.css" />
-    <Content Include="Content\styles-nav.css" />
     <Content Include="Content\styles-servicios.css" />
     <Content Include="Content\styles-sugerencias.css" />
+    <Content Include="Content\styles-menu.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
@@ -229,7 +232,13 @@
     <Content Include="conect1.edmx.diagram">
       <DependentUpon>conect1.edmx</DependentUpon>
     </Content>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\headroom.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -237,6 +246,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\menu.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -264,17 +274,18 @@
     <Content Include="Views\complain\Details.cshtml" />
     <Content Include="Views\complain\Edit.cshtml" />
     <Content Include="Views\complain\Index.cshtml" />
-    <Content Include="Views\people\Create.cshtml" />
-    <Content Include="Views\people\Delete.cshtml" />
-    <Content Include="Views\people\Details.cshtml" />
-    <Content Include="Views\people\Edit.cshtml" />
-    <Content Include="Views\people\Index.cshtml" />
     <Content Include="Views\sugs\Create.cshtml" />
     <Content Include="Views\sugs\Delete.cshtml" />
     <Content Include="Views\sugs\Details.cshtml" />
     <Content Include="Views\sugs\Edit.cshtml" />
     <Content Include="Views\sugs\Index.cshtml" />
     <Content Include="Views\Home\Servicios.cshtml" />
+    <Content Include="Views\users\Create.cshtml" />
+    <Content Include="Views\users\Delete.cshtml" />
+    <Content Include="Views\users\Details.cshtml" />
+    <Content Include="Views\users\Edit.cshtml" />
+    <Content Include="Views\users\Index.cshtml" />
+    <Content Include="Views\users\login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

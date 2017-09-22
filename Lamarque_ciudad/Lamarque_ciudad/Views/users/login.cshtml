@@ -1,19 +1,13 @@
-﻿@model Lamarque_ciudad.sug
-
+﻿
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <main>
     <article>
-
-
-
         @using (Html.BeginForm())
         {
-            @Html.AntiForgeryToken()
-
+        @Html.AntiForgeryToken()
             <div class="form-horizontal">
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
@@ -38,7 +32,13 @@
                     </div>
                 </div>
             </div>
-        }
+            <p>Usuario: <input type="text" name="nombre"></p>
 
+            <p> Contraseña: <input type="password" name="pw"> </p>
+            <br />
+            <input type="checkbox" name="record" value="No olvidar" />
+            <p>No puedo iniciar sesion</p>
+            <button type="submit">Entrar</button>
+        }
     </article>
 </main>
