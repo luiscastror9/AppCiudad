@@ -18,7 +18,7 @@ namespace Lamarque_ciudad.Controllers
         // GET: maps
         public async Task<ActionResult> Index()
         {
-            return View(await db.map.ToListAsync());
+            return View();
         }
 
         // GET: maps/Details/5

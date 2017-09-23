@@ -20,6 +20,5 @@ namespace Lamarque_ciudad.Controllers
         {
             return View();
         }
-
     }
 }

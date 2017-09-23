@@ -5,18 +5,31 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<section class="general">
-    <from class="sugerencias">
-        Nombre: <input type="text" name="nombre" size="15" maxlength="10">
-        <br />
-        <br />
-        Descripcion:
-        <br />
-        <br />
-        <textarea name="descripcion" rows="20" cols="80"></textarea>
-        <br />
-        <br />
-        <button>Enviar</button>
-        <button>Borrar</button>
-    </from>
-</section>
+<main>
+    <article>
+        <div class="container">
+            <br />
+            <div class="row">
+                <div class="cold-md-4">
+
+                    <div role="tabpanel">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#seccion1" aria-controls="" data-toggle="tab" role="tab">Sugerencias</a></li>
+                            <li role="presentation"><a href="#seccion2" aria-controls="" data-toggle="tab" role="tab">Reclamos</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="seccion1">
+                                
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="seccion2">
+                               
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
