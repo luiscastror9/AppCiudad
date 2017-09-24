@@ -168,16 +168,42 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>conect1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\complainController.cs" />
+    <Compile Include="Controllers\contacto_bdController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\mapsController.cs" />
-    <Compile Include="Controllers\sugsController.cs" />
-    <Compile Include="Controllers\usersController.cs" />
+    <Compile Include="Controllers\servicios_bdController.cs" />
+    <Compile Include="Controllers\usuarios_bdController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="map.cs">
       <DependentUpon>conect1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CiudadModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CiudadModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CiudadModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CiudadModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CiudadModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CiudadModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\contacto_bd.cs">
+      <DependentUpon>CiudadModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\eventos_bd.cs">
+      <DependentUpon>CiudadModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\servicios_bd.cs">
+      <DependentUpon>CiudadModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usuarios_bd.cs">
+      <DependentUpon>CiudadModel.tt</DependentUpon>
     </Compile>
     <Compile Include="people_bd.cs">
       <DependentUpon>conect1.tt</DependentUpon>
@@ -218,6 +244,16 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Models\CiudadModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CiudadModel.edmx</DependentUpon>
+      <LastGenOutput>CiudadModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\CiudadModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CiudadModel.edmx</DependentUpon>
+      <LastGenOutput>CiudadModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -250,6 +286,13 @@
     <Content Include="Scripts\ckeditor_4.7.3_full\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
     <Content Include="Scripts\ckeditor_4.7.3_full\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Scripts\ckeditor_4.7.3_full\ckeditor\skins\moono-lisa\readme.md" />
+    <EntityDeploy Include="Models\CiudadModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CiudadModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\CiudadModel.edmx.diagram">
+      <DependentUpon>CiudadModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ckeditor_4.7.3_full\ckeditor\adapters\jquery.js" />
     <Content Include="Scripts\ckeditor_4.7.3_full\ckeditor\build-config.js" />
@@ -886,29 +929,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Historia.cshtml" />
-    <Content Include="Views\maps\Create.cshtml" />
-    <Content Include="Views\maps\Delete.cshtml" />
-    <Content Include="Views\maps\Details.cshtml" />
-    <Content Include="Views\maps\Edit.cshtml" />
-    <Content Include="Views\maps\Index.cshtml" />
-    <Content Include="Views\complain\Create.cshtml" />
-    <Content Include="Views\complain\Delete.cshtml" />
-    <Content Include="Views\complain\Details.cshtml" />
-    <Content Include="Views\complain\Edit.cshtml" />
-    <Content Include="Views\complain\Index.cshtml" />
-    <Content Include="Views\sugs\Create.cshtml" />
-    <Content Include="Views\sugs\Delete.cshtml" />
-    <Content Include="Views\sugs\Details.cshtml" />
-    <Content Include="Views\sugs\Edit.cshtml" />
-    <Content Include="Views\sugs\Index.cshtml" />
-    <Content Include="Views\Home\Servicios.cshtml" />
-    <Content Include="Views\users\Create.cshtml" />
-    <Content Include="Views\users\Delete.cshtml" />
-    <Content Include="Views\users\Details.cshtml" />
-    <Content Include="Views\users\Edit.cshtml" />
-    <Content Include="Views\users\Index.cshtml" />
-    <Content Include="Views\users\login.cshtml" />
     <Content Include="Scripts\woocommerce-FlexSlider-0d95828\bower.json" />
     <Content Include="Scripts\woocommerce-FlexSlider-0d95828\bower_components\jquery\.bower.json" />
     <Content Include="Scripts\woocommerce-FlexSlider-0d95828\bower_components\jquery\bower.json" />
@@ -948,10 +968,24 @@
     <Content Include="Scripts\woocommerce-FlexSlider-0d95828\node_modules\jquery\src\sizzle\dist\sizzle.min.map" />
     <Content Include="Scripts\woocommerce-FlexSlider-0d95828\package.json" />
     <Content Include="Scripts\woocommerce-FlexSlider-0d95828\README.md" />
+    <Content Include="Views\contacto_bd\Create.cshtml" />
+    <Content Include="Views\contacto_bd\Delete.cshtml" />
+    <Content Include="Views\contacto_bd\Details.cshtml" />
+    <Content Include="Views\contacto_bd\Edit.cshtml" />
+    <Content Include="Views\contacto_bd\Index.cshtml" />
+    <Content Include="Views\servicios_bd\Create.cshtml" />
+    <Content Include="Views\servicios_bd\Delete.cshtml" />
+    <Content Include="Views\servicios_bd\Details.cshtml" />
+    <Content Include="Views\servicios_bd\Edit.cshtml" />
+    <Content Include="Views\servicios_bd\Index.cshtml" />
+    <Content Include="Views\usuarios_bd\Create.cshtml" />
+    <Content Include="Views\usuarios_bd\Delete.cshtml" />
+    <Content Include="Views\usuarios_bd\Details.cshtml" />
+    <Content Include="Views\usuarios_bd\Edit.cshtml" />
+    <Content Include="Views\usuarios_bd\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

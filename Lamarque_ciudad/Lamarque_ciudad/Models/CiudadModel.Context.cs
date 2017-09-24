@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Lamarque_ciudad
+namespace Lamarque_ciudad.Models
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DB_A2A1B8_netbd1Entities : DbContext
+    public partial class DB_A2A1B8_netbd1Entities1 : DbContext
     {
-        public DB_A2A1B8_netbd1Entities()
-            : base("name=DB_A2A1B8_netbd1Entities")
+        public DB_A2A1B8_netbd1Entities1()
+            : base("name=DB_A2A1B8_netbd1Entities1")
         {
         }
     
@@ -25,15 +25,9 @@ namespace Lamarque_ciudad
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<complain_bd> complain_bd { get; set; }
-        public virtual DbSet<map> map { get; set; }
-        public virtual DbSet<people_bd> people_bd { get; set; }
-        public virtual DbSet<sug> sug { get; set; }
-
-        public System.Data.Entity.DbSet<Lamarque_ciudad.Models.contacto_bd> contacto_bd { get; set; }
-
-        public System.Data.Entity.DbSet<Lamarque_ciudad.Models.servicios_bd> servicios_bd { get; set; }
-
-        public System.Data.Entity.DbSet<Lamarque_ciudad.Models.usuarios_bd> usuarios_bd { get; set; }
+        public virtual DbSet<contacto_bd> contacto_bd { get; set; }
+        public virtual DbSet<eventos_bd> eventos_bd { get; set; }
+        public virtual DbSet<servicios_bd> servicios_bd { get; set; }
+        public virtual DbSet<usuarios_bd> usuarios_bd { get; set; }
     }
 }
