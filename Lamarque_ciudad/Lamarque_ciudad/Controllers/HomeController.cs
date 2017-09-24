@@ -12,5 +12,18 @@ namespace Lamarque_ciudad.Controllers
         {
             return View();
         }
+        public ActionResult Historia()
+        {
+            return View();
+        }
+        public ActionResult Servicios()
+        {
+            return View();
+        }
+
+        public ActionResult eventos_bd()
+        {
+            return View();
+        }
     }
 }

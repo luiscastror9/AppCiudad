@@ -26,21 +26,6 @@ namespace Lamarque_ciudad
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/style-nav.css"));
-
-            bundles.Add(new ScriptBundle("~/bundles/headerJS").Include(
-                        "~/Scripts/External/jquery.min.js",
-                        "~/Scripts/External/bootstrap.min.js",
-                        "~/Scripts/ckeditor/ckeditor.js",
-                        "~/Scripts/ckeditor/samples/js/sample.js"
-                        ));
-
-            bundles.Add(new ScriptBundle("~/bundles/footer").Include(
-                      "~/Scripts/External/jquery.min.js",
-                      "~/Scripts/External/bootstrap.min.js",
-                      "~/Scripts/External/bootstrap-datepicker.js",
-                      "~/Scripts/External/bootstrap-datetimepicker.min.js",
-                      "~/Scripts/Custom/Shared/Layout.js"
-                      ));
         }
     }
 }

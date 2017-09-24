@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Lamarque_ciudad.sug>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="general">
+    <from class="sugerencias">
+        Nombre: <input type="text" name="nombre" size="15" maxlength="10">
+        <br />
+        <br />
+        Descripcion:
+        <br />
+        <br />
+        <textarea name="descripcion" rows="20" cols="80"></textarea>
+        <br />
+        <br />
+        <button>Enviar</button>
+        <button>Borrar</button>
+    </from>
+</section>
