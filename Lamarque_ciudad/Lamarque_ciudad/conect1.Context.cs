@@ -42,7 +42,12 @@ public partial class DB_A2A1B8_netbd1Entities : DbContext
 
     public virtual DbSet<eventos_bd> eventos_bd { get; set; }
 
-}
+        public System.Data.Entity.DbSet<Lamarque_ciudad.Models.contacto_bd> contacto_bd { get; set; }
+
+        public System.Data.Entity.DbSet<Lamarque_ciudad.Models.usuarios_bd> usuarios_bd { get; set; }
+
+        public System.Data.Entity.DbSet<Lamarque_ciudad.Models.servicios_bd> servicios_bd { get; set; }
+    }
 
 }
 

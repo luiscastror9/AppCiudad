@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A2A1B8_netbd1Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="complain_bd">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="user" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="adr" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="desc" Type="String" MaxLength="400" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="day" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="eventos_bd">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="endDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="map">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="lat" Type="Int32" Nullable="false" />
+    <Property Name="leng" Type="Int32" Nullable="false" />
+    <Property Name="desc" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="people_bd">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="user" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="pass" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="lastname" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="birth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="mail" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="servicios_bd">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sug">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="desc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityContainer Name="DB_A2A1B8_netbd1Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="complain_bd" EntityType="Self.complain_bd" />
+    <EntitySet Name="eventos_bd" EntityType="Self.eventos_bd" />
+    <EntitySet Name="map" EntityType="Self.map" />
+    <EntitySet Name="people_bd" EntityType="Self.people_bd" />
+    <EntitySet Name="servicios_bd" EntityType="Self.servicios_bd" />
+    <EntitySet Name="sug" EntityType="Self.sug" />
+  </EntityContainer>
+</Schema>

@@ -171,12 +171,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>conect1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\complainController.cs" />
+    <Compile Include="Controllers\contacto_bdController.cs" />
     <Compile Include="Controllers\eventos_bdController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\mapsController.cs" />
     <Compile Include="Controllers\peopleController.cs" />
+    <Compile Include="Controllers\servicios_bdController.cs" />
     <Compile Include="Controllers\sugsController.cs" />
+    <Compile Include="Controllers\usuarios_bdController.cs" />
     <Compile Include="eventos_bd.cs">
       <DependentUpon>conect1.tt</DependentUpon>
     </Compile>
@@ -185,6 +187,36 @@
     </Compile>
     <Compile Include="map.cs">
       <DependentUpon>conect1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\contacto_bd.cs">
+      <DependentUpon>LamarqueModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\eventos_bd.cs">
+      <DependentUpon>LamarqueModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LamarqueModelo.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LamarqueModelo.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LamarqueModelo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LamarqueModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LamarqueModelo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LamarqueModelo.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mapa_bd.cs">
+      <DependentUpon>LamarqueModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\servicios_bd.cs">
+      <DependentUpon>LamarqueModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usuarios_bd.cs">
+      <DependentUpon>LamarqueModelo.tt</DependentUpon>
     </Compile>
     <Compile Include="people_bd.cs">
       <DependentUpon>conect1.tt</DependentUpon>
@@ -224,6 +256,16 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Models\LamarqueModelo.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LamarqueModelo.edmx</DependentUpon>
+      <LastGenOutput>LamarqueModelo.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\LamarqueModelo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LamarqueModelo.edmx</DependentUpon>
+      <LastGenOutput>LamarqueModelo.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -235,6 +277,13 @@
     </EntityDeploy>
     <Content Include="conect1.edmx.diagram">
       <DependentUpon>conect1.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\LamarqueModelo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LamarqueModelo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\LamarqueModelo.edmx.diagram">
+      <DependentUpon>LamarqueModelo.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\dhtmlxScheduler\dhtmlxscheduler.css" />
@@ -497,10 +546,25 @@
     <Content Include="Views\eventos_bd\Details.cshtml" />
     <Content Include="Views\eventos_bd\Edit.cshtml" />
     <Content Include="Views\eventos_bd\Index.cshtml" />
+    <Content Include="Views\contacto_bd\Create.cshtml" />
+    <Content Include="Views\contacto_bd\Delete.cshtml" />
+    <Content Include="Views\contacto_bd\Details.cshtml" />
+    <Content Include="Views\contacto_bd\Edit.cshtml" />
+    <Content Include="Views\contacto_bd\Index.cshtml" />
+    <Content Include="Views\usuarios_bd\Create.cshtml" />
+    <Content Include="Views\usuarios_bd\Delete.cshtml" />
+    <Content Include="Views\usuarios_bd\Details.cshtml" />
+    <Content Include="Views\usuarios_bd\Edit.cshtml" />
+    <Content Include="Views\usuarios_bd\Index.cshtml" />
+    <Content Include="Views\usuarios_bd\login.cshtml" />
+    <Content Include="Views\servicios_bd\Create.cshtml" />
+    <Content Include="Views\servicios_bd\Delete.cshtml" />
+    <Content Include="Views\servicios_bd\Details.cshtml" />
+    <Content Include="Views\servicios_bd\Edit.cshtml" />
+    <Content Include="Views\servicios_bd\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

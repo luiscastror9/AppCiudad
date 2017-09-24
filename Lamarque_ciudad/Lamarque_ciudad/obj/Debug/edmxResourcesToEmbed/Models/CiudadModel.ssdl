@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A2A1B8_netbd1Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="contacto_bd">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="correo" Type="nvarchar" MaxLength="50" />
+    <Property Name="descripcion" Type="nvarchar(max)" />
+    <Property Name="tipo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="eventos_bd">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" />
+    <Property Name="startDate" Type="datetime" />
+    <Property Name="endDate" Type="date" />
+  </EntityType>
+  <EntityType Name="servicios_bd">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipo" Type="nvarchar" MaxLength="50" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="descripcion" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="usuarios_bd">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="contraseña" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellido" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nacimiento" Type="date" Nullable="false" />
+    <Property Name="correo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DB_A2A1B8_netbd1Model1StoreContainer">
+    <EntitySet Name="contacto_bd" EntityType="Self.contacto_bd" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eventos_bd" EntityType="Self.eventos_bd" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servicios_bd" EntityType="Self.servicios_bd" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuarios_bd" EntityType="Self.usuarios_bd" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
