@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A2A1B8_netbd1Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="complain_bd">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="user" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="adr" Type="nchar" MaxLength="10" />
+    <Property Name="desc" Type="nchar" MaxLength="400" Nullable="false" />
+    <Property Name="day" Type="date" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eventos_bd">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" />
+    <Property Name="startDate" Type="datetime" />
+    <Property Name="endDate" Type="date" />
+  </EntityType>
+  <EntityType Name="map">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="name" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="lat" Type="int" Nullable="false" />
+    <Property Name="leng" Type="int" Nullable="false" />
+    <Property Name="desc" Type="nchar" MaxLength="50" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="people_bd">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="user" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="pass" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="name" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="lastname" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="birth" Type="date" Nullable="false" />
+    <Property Name="mail" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servicios_bd">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipo" Type="nvarchar" MaxLength="50" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="descripcion" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="sug">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="name" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="desc" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DB_A2A1B8_netbd1Model1StoreContainer">
+    <EntitySet Name="complain_bd" EntityType="Self.complain_bd" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eventos_bd" EntityType="Self.eventos_bd" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="map" EntityType="Self.map" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="people_bd" EntityType="Self.people_bd" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servicios_bd" EntityType="Self.servicios_bd" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sug" EntityType="Self.sug" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -5,39 +5,55 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lamarque - @ViewBag.Title</title>
-    @Styles.Render("~/Content/styles-nav.css")
-    @Styles.Render("~/Content/styles-historia.css")
-    @Styles.Render("~/Content/styles-servicios.css")
     @Styles.Render("~/Content/styles-map.css")
-    @Styles.Render("~/Content/styles-servicios.css")
-    @Styles.Render("~/Content/styles-sugerencias.css")
-    @Styles.Render("~/Content/styles-home.css")
-    @Styles.Render("~/Content/styles-input.css")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/styles-historia.css")
 </head>
 <body>
-    <header>
-        <div class="wrapper">
-            <div class="logo">
-                Municipalidad de Lamarque
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="~/Home/Index">Ciudad de Lamarque</a>
             </div>
-            <nav>
-                <a href="~/Home/Index">Inicio</a>
-                <a href="~/Home/Historia">Historia</a>
-                <a href="~/Home/servicios">Servicios</a>
-                <a href="~/maps/Index">Mapa</a>
-                <a href="~/sugs/Index">Sugerencias</a>
-                <a href="~/complain/">Reclamos</a>
-                <a href="~/eventos_bd/Index">Eventos</a>
-            </nav>
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        La ciudad
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="~/Home/Historia">Historia</a></li>
+                        <li><a href="~/servicios_bd/Index">Servicios</a></li>
+                        <li><a href="~/eventos_bd/Index">Calendario</a></li>
+                        <li><a href="~/maps/Index">Mapa</a></li>
+                    </ul>
+                </li>
+                <li><a href="~/contacto_bd/Create">Contacto</a></li>
+                <li><a href="~/usuarios_bd/Index">Usuarios</a></li>
+            </ul>
+@using (Html.BeginForm("Buscar", "Home", FormMethod.Post, htmlAttributes: new { @class = "navbar-form navbar-left" }))
+{
+          
+                <div class="form-group">
+                    <input name="busqueda_txt" type="text" class="form-control" placeholder="Buscar">
+                </div>
+                <button id="busqueda" class="btn btn-default" type="submit">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            }
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="~/usuarios_bd/Create"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+                <li><a href="~/usuarios_bd/login"><span class="glyphicon glyphicon-log-in"></span> Iniciar sesion</a></li>
+            </ul>
         </div>
-    </header>
+    </div>
     <div class="container body-content">
-        @RenderBody()
-        <hr />
+            <br /><br /><br />
+            <hr />
+            @RenderBody()
+            <hr />
         <footer>
-            <div class="pie">
-                <p> Diseño por ### </p>
-            </div>
         </footer>
     </div>
 
