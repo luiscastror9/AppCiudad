@@ -17,17 +17,9 @@
                 <a class="navbar-brand" href="~/Home/Index">Ciudad de Lamarque</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        La ciudad
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="~/Home/Historia">Historia</a></li>                     
-                        <li><a href="~/eventos_bd/Index">Calendario</a></li>
-                        <li><a href="~/servicios_bd/Index">Servicios</a></li>
-                    </ul>
-                </li>
+                <li><a href="~/Home/Historia">Historia</a></li>
+                <li><a href="~/eventos_bd/Index">Calendario</a></li>
+                <li><a href="~/servicios_bd/Index">Servicios</a></li>
                 <li><a href="~/contacto_bd/Create">Contacto</a></li>
             </ul>
             @using (Html.BeginForm("Buscar", "Home", FormMethod.Post, htmlAttributes: new { @class = "navbar-form navbar-left" }))

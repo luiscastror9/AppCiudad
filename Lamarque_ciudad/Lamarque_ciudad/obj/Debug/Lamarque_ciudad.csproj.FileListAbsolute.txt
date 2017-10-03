@@ -640,3 +640,4 @@ C:\Users\Matias\Desktop\AppCiudad\AppCiudad\Lamarque_ciudad\Lamarque_ciudad\bin\
 C:\Users\Matias\Desktop\AppCiudad\AppCiudad\Lamarque_ciudad\Lamarque_ciudad\obj\Debug\Lamarque_ciudad.csproj.CoreCompileInputs.cache
 C:\Users\Matias\Desktop\AppCiudad\AppCiudad\Lamarque_ciudad\Lamarque_ciudad\obj\Debug\Lamarque_ciudad.dll
 C:\Users\Matias\Desktop\AppCiudad\AppCiudad\Lamarque_ciudad\Lamarque_ciudad\obj\Debug\Lamarque_ciudad.pdb
+C:\Users\Matias\Desktop\AppCiudad\AppCiudad\Lamarque_ciudad\Lamarque_ciudad\obj\Debug\Lamarque_ciudad.csprojResolveAssemblyReference.cache

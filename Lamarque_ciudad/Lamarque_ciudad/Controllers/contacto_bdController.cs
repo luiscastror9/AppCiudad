@@ -56,7 +56,7 @@ namespace Lamarque_ciudad.Controllers
             {
                 db.contacto_bd.Add(contacto_bd);
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                return RedirectToAction("Create");
             }
 
             return View(contacto_bd);
