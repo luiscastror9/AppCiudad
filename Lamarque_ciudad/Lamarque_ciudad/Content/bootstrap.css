@@ -275,7 +275,7 @@ table {
     page-break-after: avoid;
   }
   .navbar {
-    display: none;
+    display: block;
   }
   .table td,
   .table th {
@@ -2013,7 +2013,7 @@ textarea.input-lg {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-       -o-user-select: none;
+
           user-select: none;
 }
 
@@ -3818,7 +3818,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 10px;
 }
 
 .nav > li > a:hover,
@@ -4239,7 +4239,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-nav {
-  margin: 7.5px -15px;
+  margin: auto;
 }
 
 .navbar-nav > li > a {
@@ -4260,7 +4260,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   }
   .navbar-nav .open .dropdown-menu > li > a,
   .navbar-nav .open .dropdown-menu .dropdown-header {
-    padding: 5px 15px 5px 25px;
+    padding: 8px;
   }
   .navbar-nav .open .dropdown-menu > li > a {
     line-height: 20px;
@@ -4287,7 +4287,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 @media (min-width: 768px) {
   .navbar-left {
-    float: left !important;
+    float: right !important;
   }
   .navbar-right {
     float: right !important;
@@ -5162,7 +5162,6 @@ a.thumbnail:focus {
 .progress.active .progress-bar {
   -webkit-animation: progress-bar-stripes 2s linear infinite;
      -moz-animation: progress-bar-stripes 2s linear infinite;
-      -ms-animation: progress-bar-stripes 2s linear infinite;
        -o-animation: progress-bar-stripes 2s linear infinite;
           animation: progress-bar-stripes 2s linear infinite;
 }
