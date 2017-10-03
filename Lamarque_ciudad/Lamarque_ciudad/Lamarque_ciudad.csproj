@@ -204,13 +204,6 @@
     <Content Include="Content\Imagenes\historia\imgr2.gif" />
     <Content Include="Content\Imagenes\servicios\imgl.gif" />
     <Content Include="Content\Imagenes\servicios\imgl2.gif" />
-    <Content Include="Content\styles-map.css" />
-    <Content Include="Content\styles-historia.css" />
-    <Content Include="Content\styles-home.css" />
-    <Content Include="Content\styles-input.css" />
-    <Content Include="Content\styles-nav.css" />
-    <Content Include="Content\styles-servicios.css" />
-    <Content Include="Content\styles-sugerencias.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -471,11 +464,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Historia.cshtml" />
-    <Content Include="Views\maps\Create.cshtml" />
-    <Content Include="Views\maps\Delete.cshtml" />
-    <Content Include="Views\maps\Details.cshtml" />
-    <Content Include="Views\maps\Edit.cshtml" />
-    <Content Include="Views\maps\Index.cshtml" />
     <Content Include="Views\complain\Create.cshtml" />
     <Content Include="Views\complain\Delete.cshtml" />
     <Content Include="Views\complain\Details.cshtml" />
@@ -486,11 +474,6 @@
     <Content Include="Views\people\Details.cshtml" />
     <Content Include="Views\people\Edit.cshtml" />
     <Content Include="Views\people\Index.cshtml" />
-    <Content Include="Views\sugs\Create.cshtml" />
-    <Content Include="Views\sugs\Delete.cshtml" />
-    <Content Include="Views\sugs\Details.cshtml" />
-    <Content Include="Views\sugs\Edit.cshtml" />
-    <Content Include="Views\sugs\Index.cshtml" />
     <Content Include="Views\Home\Servicios.cshtml" />
     <Content Include="Views\eventos_bd\Create.cshtml" />
     <Content Include="Views\eventos_bd\Delete.cshtml" />

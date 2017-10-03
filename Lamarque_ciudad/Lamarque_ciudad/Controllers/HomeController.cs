@@ -30,13 +30,17 @@ namespace Lamarque_ciudad.Controllers
         public ActionResult Buscar(FormCollection collection)
         {
             string val = collection["busqueda_txt"];
-           List<eventos_bd> x = db.eventos_bd.Where(a=> a.descripcion.Contains(val)).ToList();
+            List<eventos_bd> x = db.eventos_bd.Where(a => a.descripcion.Contains(val)).ToList();
             List<servicios_bd> y = db.servicios_bd.Where(a => a.descripcion.Contains(val) || a.tipo.Contains(val) || a.nombre.Contains(val)).ToList();
             Models.resultadobusqueda res = new Models.resultadobusqueda();
 
             res.eventos = x;
             res.servicios = y;
             return View(res);
+        }
+        public ActionResult Contacto()
+        {
+            return View();
         }
     }
 }

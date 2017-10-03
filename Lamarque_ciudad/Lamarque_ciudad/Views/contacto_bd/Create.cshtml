@@ -1,4 +1,4 @@
-﻿@model Lamarque_ciudad.contacto_bd
+﻿@model IEnumerable<Lamarque_ciudad.contacto_bd>
 
 @{
     ViewBag.Title = "Create";
@@ -18,32 +18,28 @@
         <div class="form-group">
             @Html.Label("Nombre", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-2">
-                @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
-            </div>
+                @Html.Editor("Nombre", new { htmlAttributes = new { @class = "form-control" } })
+        </div>
         </div>
 
         <div class="form-group">
             @Html.Label("Correo", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-3">
-                @Html.EditorFor(model => model.correo, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.correo, "", new { @class = "text-danger" })
+                @Html.Editor("Correo", new { htmlAttributes = new { @class = "form-control" } })                
             </div>
         </div>
 
         <div class="form-group">
             @Html.Label("Descripcion", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-3">
-                @Html.TextAreaFor(model => model.descripcion, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.descripcion, "", new { @class = "text-danger" })
+                @Html.TextArea("Descripcion", new { htmlAttributes = new { @class = "form-control" } })               
             </div>
         </div>
 
         <div class="form-group">
             @Html.Label("Tipo", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-2">
-                @Html.EditorFor(model => model.tipo, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.tipo, "", new { @class = "text-danger" })
+                @Html.Editor("Tipo", new { htmlAttributes = new { @class = "form-control" } })
             </div>
         </div>
 
