@@ -14,29 +14,29 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" customannotation:ClrType="eventos_bd.id" />
-    <Property Name="descripcion" Type="nvarchar(max)" customannotation:ClrType="eventos_bd.descripcion" />
-    <Property Name="startDate" Type="datetime" customannotation:ClrType="eventos_bd.startDate" />
-    <Property Name="endDate" Type="date" customannotation:ClrType="eventos_bd.endDate" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" />
+    <Property Name="startDate" Type="datetime" />
+    <Property Name="endDate" Type="date" />
   </EntityType>
   <EntityType Name="mapa_bd">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" customannotation:ClrType="mapa_bd.id" />
-    <Property Name="Nombre" Type="nvarchar" MaxLength="50" customannotation:ClrType="mapa_bd.Nombre" />
-    <Property Name="Descripcion" Type="nvarchar(max)" customannotation:ClrType="mapa_bd.Descripcion" />
-    <Property Name="Latitud" Type="decimal" Precision="18" Scale="0" customannotation:ClrType="mapa_bd.Latitud" />
-    <Property Name="Longitud" Type="decimal" Precision="18" Scale="0" customannotation:ClrType="mapa_bd.Longitud" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="Descripcion" Type="nvarchar(max)" />
+    <Property Name="Latitud" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Longitud" Type="decimal" Precision="18" Scale="0" />
   </EntityType>
   <EntityType Name="servicios_bd">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" customannotation:ClrType="servicios_bd.Id" />
-    <Property Name="tipo" Type="nvarchar" MaxLength="50" customannotation:ClrType="servicios_bd.tipo" />
-    <Property Name="nombre" Type="nvarchar" MaxLength="50" customannotation:ClrType="servicios_bd.nombre" />
-    <Property Name="descripcion" Type="nvarchar(max)" customannotation:ClrType="servicios_bd.descripcion" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipo" Type="nvarchar" MaxLength="50" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="descripcion" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="usuarios_bd">
     <Key>

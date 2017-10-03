@@ -8,13 +8,12 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Lamarque_ciudad;
-using Lamarque_ciudad.Models;
 
 namespace Lamarque_ciudad.Controllers
 {
     public class servicios_bdController : Controller
     {
-        private DB_A2A1B8_netbd1Entities db = new DB_A2A1B8_netbd1Entities();
+        private DB_A2A1B8_netbd1Entities1 db = new DB_A2A1B8_netbd1Entities1();
 
         // GET: servicios_bd
         public async Task<ActionResult> Index()

@@ -24,8 +24,7 @@ namespace Lamarque_ciudad
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/style-nav.css"));
+                      "~/Content/bootstrap.css"));
         }
     }
 }

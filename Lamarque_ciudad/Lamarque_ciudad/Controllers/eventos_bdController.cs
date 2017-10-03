@@ -14,7 +14,7 @@ namespace Lamarque_ciudad.Controllers
 {
     public class eventos_bdController : Controller
     {
-        private DB_A2A1B8_netbd1Entities db = new DB_A2A1B8_netbd1Entities();
+        private DB_A2A1B8_netbd1Entities1 db = new DB_A2A1B8_netbd1Entities1();
 
         // GET: eventos_bd
         public ActionResult Index()

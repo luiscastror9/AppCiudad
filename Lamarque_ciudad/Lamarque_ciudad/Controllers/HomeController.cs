@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
 
 namespace Lamarque_ciudad.Controllers
@@ -16,13 +13,15 @@ namespace Lamarque_ciudad.Controllers
         {
             return View();
         }
-        public ActionResult Servicios()
+        public ActionResult eventos_bd()
         {
             return View();
         }
-
-        public ActionResult eventos_bd()
+        [HttpPost]
+        public ActionResult Buscar(FormCollection collection)
         {
+            DB_A2A1B8_netbd1Entities1 db = new DB_A2A1B8_netbd1Entities1();
+            var x = db.eventos_bd.Where(z => z.descripcion.Contains(collection["busqueda_txt"].ToString())).ToList();
             return View();
         }
     }

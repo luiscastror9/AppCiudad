@@ -12,11 +12,12 @@ namespace Lamarque_ciudad
     using System;
     using System.Collections.Generic;
     
-    public partial class eventos_bd
+    public partial class mapa_bd
     {
         public int Id { get; set; }
-        public string descripcion { get; set; }
-        public Nullable<System.DateTime> startDate { get; set; }
-        public Nullable<System.DateTime> endDate { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+        public Nullable<decimal> Latitud { get; set; }
+        public Nullable<decimal> Longitud { get; set; }
     }
 }

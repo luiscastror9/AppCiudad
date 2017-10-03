@@ -50,7 +50,7 @@
     <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
   </EntityType>
-  <EntityContainer Name="DB_A2A1B8_netbd1Entities2" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="DB_A2A1B8_netbd1Entities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="contacto_bd" EntityType="Self.contacto_bd" />
     <EntitySet Name="eventos_bd" EntityType="Self.eventos_bd" />
     <EntitySet Name="mapa_bd" EntityType="Self.mapa_bd" />

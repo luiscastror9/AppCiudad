@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="DB_A2A1B8_netbd1Model1StoreContainer" CdmEntityContainer="DB_A2A1B8_netbd1Entities21">
+  <EntityContainerMapping StorageEntityContainer="DB_A2A1B8_netbd1ModelStoreContainer" CdmEntityContainer="DB_A2A1B8_netbd1Entities1">
     <EntitySetMapping Name="contacto_bd">
-      <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model1.contacto_bd">
+      <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.contacto_bd">
         <MappingFragment StoreEntitySet="contacto_bd">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
@@ -13,7 +13,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="eventos_bd">
-      <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model1.eventos_bd">
+      <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.eventos_bd">
         <MappingFragment StoreEntitySet="eventos_bd">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
@@ -23,7 +23,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="mapa_bd">
-      <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model1.mapa_bd">
+      <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.mapa_bd">
         <MappingFragment StoreEntitySet="mapa_bd">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -34,7 +34,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="servicios_bd">
-      <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model1.servicios_bd">
+      <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.servicios_bd">
         <MappingFragment StoreEntitySet="servicios_bd">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="tipo" ColumnName="tipo" />
@@ -44,7 +44,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="usuarios_bd">
-      <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model1.usuarios_bd">
+      <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.usuarios_bd">
         <MappingFragment StoreEntitySet="usuarios_bd">
           <ScalarProperty Name="usuario" ColumnName="usuario" />
           <ScalarProperty Name="contraseña" ColumnName="contraseña" />

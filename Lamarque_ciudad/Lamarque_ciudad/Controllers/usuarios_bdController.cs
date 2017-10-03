@@ -8,19 +8,14 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Lamarque_ciudad;
-using Lamarque_ciudad.Models;
 
 namespace Lamarque_ciudad.Controllers
 {
     public class usuarios_bdController : Controller
     {
-        private DB_A2A1B8_netbd1Entities db = new DB_A2A1B8_netbd1Entities();
+        private DB_A2A1B8_netbd1Entities1 db = new DB_A2A1B8_netbd1Entities1();
 
         public ActionResult Index()
-        {
-            return View();
-        }
-        public ActionResult login()
         {
             return View();
         }
@@ -132,6 +127,45 @@ namespace Lamarque_ciudad.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+
+
+        public ActionResult login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(usuarios_bd objUser)
+        {
+            if (ModelState.IsValid)
+            {
+                using (DB_A2A1B8_netbd1Entities1 db = new DB_A2A1B8_netbd1Entities1())
+                {
+                    var obj = db.usuarios_bd.Where(a => a.usuario.Equals(objUser.usuario) && a.contraseña.Equals(objUser.contraseña)).FirstOrDefault();
+                    if (obj != null)
+                    {
+                        Session["id"] = obj.id.ToString();
+                        Session["usuario"] = obj.usuario.ToString();
+                        return RedirectToAction("UserDashBoard");
+                    }
+                }
+            }
+            return View(objUser);
+        }
+
+        public ActionResult UserDashBoard()
+        {
+            if (Session["usuario"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("login");
+            }
         }
     }
 }
