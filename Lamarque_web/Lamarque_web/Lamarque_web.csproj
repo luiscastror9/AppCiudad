@@ -231,6 +231,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelLamarque.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\resultadobusqueda.cs" />
     <Compile Include="Models\servicios_bd.cs">
       <DependentUpon>ModelLamarque.tt</DependentUpon>
     </Compile>
@@ -890,6 +891,7 @@
     <Content Include="Views\mapa_bd\Details.cshtml" />
     <Content Include="Views\mapa_bd\Edit.cshtml" />
     <Content Include="Views\mapa_bd\Index.cshtml" />
+    <Content Include="Views\Home\Buscar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
