@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Lamarque_web.Models.servicios_bd>
+
+@{
+    ViewBag.Title = "Servicios";
+}
+
+<h2>Servicios.</h2>
+
+<p>
+    @Html.ActionLink("Agregar", "Create")
+</p>
+<table class="table  table-hover">
+    <tr class="warning">
+        <th>
+            @Html.DisplayName("Tipo")
+        </th>
+        <th>
+            @Html.DisplayName("Nombre")
+        </th>
+        <th>
+            @Html.DisplayName("Descripcion")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descripcion)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Ver +", "Details", new { id=item.Id }) |
+                @*Html.ActionLink("Eliminar", "Delete", new { id=item.Id })*@
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.ActionLink("Agregar", "Create")
+<br />
+<hr />
+@Html.ActionLink("Volver arriba", "Index")
+<br /><br />
+@Html.ActionLink("<-- Volver al Inicio", "Index", "Home")
