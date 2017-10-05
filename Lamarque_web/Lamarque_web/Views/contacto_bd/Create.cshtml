@@ -32,10 +32,11 @@
         <div class="form-group">
             @Html.Label("Descripcion", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.descripcion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextAreaFor(model => model.descripcion)
                 @Html.ValidationMessageFor(model => model.descripcion, "", new { @class = "text-danger" })
             </div>
         </div>
+
 
         <div class="form-group">
             @Html.Label("Tipo", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -55,3 +56,8 @@
 
 <hr />
 @Html.ActionLink("<-- Volver al Inicio", "Index", "Home")
+
+<script type="text/javascript" src="~/Scripts/ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+    CKEDITOR.replace("descripcion");
+</script>
