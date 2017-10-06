@@ -11,7 +11,7 @@ namespace Lamarque_web.Models
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class contacto_bd
     {
         public int Id { get; set; }
