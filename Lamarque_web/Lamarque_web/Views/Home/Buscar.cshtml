@@ -8,14 +8,24 @@
 <hr />
 <br />
 
-    @if(Model.eventos.Count==0)
-    {
-        <h1> No se encontraron resultados </h1>
-    }
 
-    else
+@if (Model.servicios.Count == 0)
+{
+    if (Model.eventos.Count > 0)
     {
-        <table class="table">
+        <h4>Eventos.</h4>
+        <table class="table table-bordered">
+            <tr class="warning">
+                <th>
+                    @Html.DisplayName("Descripcion")
+                </th>
+                <th>
+                    @Html.DisplayName("Empieza")
+                </th>
+                <th>
+                    @Html.DisplayName("Termina")
+                </th>
+            </tr>
             @foreach (var itemevento in Model.eventos)
             {
                 <tr>
@@ -31,16 +41,29 @@
                 </tr>
             }
         </table>
-     }
-            
-    @if (Model.servicios.Count == 0)
-    {
-        <h1> No se encontraron resultados </h1>
     }
     else
     {
-        <table class="table">
-            }
+        <h4>No hay resultados disponibles.</h4>
+    }
+}
+else if (Model.eventos.Count == 0)
+{
+    if (Model.servicios.Count > 0)
+    {
+        <h4>Servicios.</h4>
+        <table class="table table-bordered">
+            <tr class="warning">
+                <th>
+                    @Html.DisplayName("Tipo")
+                </th>
+                <th>
+                    @Html.DisplayName("Nombre")
+                </th>
+                <th>
+                    @Html.DisplayName("Contacto")
+                </th>
+            </tr>
             @foreach (var itemservicios in Model.servicios)
             {
                 <tr>
@@ -58,4 +81,14 @@
             }
         </table>
     }
+    else
+    {
+        <h4>No hay resultados disponibles.</h4>
+    }
+}
+else
+{
+    <p>No hay resultados disponibles.</p>
+}
+<br /><hr />
 @Html.ActionLink("<-- Volver al Inicio", "Index")
