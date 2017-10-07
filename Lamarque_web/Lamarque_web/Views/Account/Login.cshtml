@@ -4,14 +4,14 @@
     ViewBag.Title = "Iniciar sesión";
 }
 
-<h2>@ViewBag.Title.</h2>
+<h1 class="titulo">Iniciar sesion</h1>
+<br />
 <div class="row">
     <div class="col-md-8">
         <section id="loginForm">
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
                 @Html.AntiForgeryToken()               
-                <hr />
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
                     @Html.Label("Usuario", new { @class = "col-md-2 control-label" })
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <p>
-                    @Html.ActionLink("Registrar como nuevo usuario", "Register")
+                    @Html.ActionLink("No tengo cuenta", "Register")
                 </p>
                 @* Habilite esta opción después de habilitar la confirmación de la cuenta para la función de restablecimiento de contraseña
                     <p>

@@ -4,13 +4,13 @@
     ViewBag.Title = "Buscar";
 }
 
-<h2>Resultados de la busqueda</h2>
-<hr />
+<h1 class="titulo">Resultados de la busqueda</h1>
+<br />
 <br />
 
 @if (Model.servicios == null && Model.eventos == null)
 {
-    <h4>No hay resultados disponibles.</h4>
+    <h4 class="titulo">No hay resultados disponibles...</h4>
 
 }
 else
@@ -19,9 +19,9 @@ else
     {
         if (Model.eventos.Count > 0)
         {
-        <h4>Eventos.</h4>
+        <h4 class="titulo">Eventos.</h4>
         <table class="table table-bordered">
-            <tr class="warning">
+            <tr class="active">
                 <th>
                     @Html.DisplayName("Descripcion")
                 </th>
@@ -50,16 +50,16 @@ else
     }
     else
     {
-        <h4>No hay resultados disponibles.</h4>
+        <h4 class="titulo">No hay resultados disponibles...</h4>
     }
 }
 else if (Model.eventos.Count == 0)
 {
     if (Model.servicios.Count > 0)
     {
-        <h4>Servicios.</h4>
+        <h4 class="titulo">Servicios.</h4>
         <table class="table table-bordered">
-            <tr class="warning">
+            <tr class="active">
                 <th>
                     @Html.DisplayName("Tipo")
                 </th>
@@ -89,13 +89,14 @@ else if (Model.eventos.Count == 0)
     }
     else
     {
-        <h4>No hay resultados disponibles.</h4>
+        <h4 class="titulo">No hay resultados disponibles...</h4>
     }
 }
 else
 {
-    <p>No hay resultados disponibles.</p>
+    <h4 class="titulo">No hay resultados disponibles...</h4>
 }
 }
-<br /><hr />
+<br />
+<br />
 @Html.ActionLink("<-- Volver al Inicio", "Index")

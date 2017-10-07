@@ -244,11 +244,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Imagenes\chicago.jpg" />
     <Content Include="Content\Imagenes\Historia\imgl.gif" />
     <Content Include="Content\Imagenes\Historia\imgr.gif" />
-    <Content Include="Content\Imagenes\la.jpg" />
-    <Content Include="Content\Imagenes\ny.jpg" />
+    <Content Include="Content\Imagenes\logo1.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
