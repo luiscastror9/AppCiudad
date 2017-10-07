@@ -1,13 +1,15 @@
 ﻿@using Lamarque_web.Models
 @model LoginViewModel
 @{
-    ViewBag.Title = "Iniciar sesión";
+    ViewBag.Title = "Acceder";
 }
 
+<h1 class="titulo">Iniciar sesion</h1>
+<br />
 <div class="content caja">
     <div class="row">
         <div class="col-md-8">
-            <h4 class="titulo">Iniciar sesion</h4>
+            
             <section id="loginForm">
                 @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
