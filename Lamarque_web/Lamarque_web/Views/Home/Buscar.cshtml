@@ -8,11 +8,17 @@
 <hr />
 <br />
 
-
-@if (Model.servicios.Count == 0)
+@if (Model.servicios == null && Model.eventos == null)
 {
-    if (Model.eventos.Count > 0)
+    <h4>No hay resultados disponibles.</h4>
+
+}
+else
+{
+    if (Model.servicios.Count == 0)
     {
+        if (Model.eventos.Count > 0)
+        {
         <h4>Eventos.</h4>
         <table class="table table-bordered">
             <tr class="warning">
@@ -89,6 +95,7 @@ else if (Model.eventos.Count == 0)
 else
 {
     <p>No hay resultados disponibles.</p>
+}
 }
 <br /><hr />
 @Html.ActionLink("<-- Volver al Inicio", "Index")

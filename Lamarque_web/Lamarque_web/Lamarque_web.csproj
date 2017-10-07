@@ -244,8 +244,11 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Imagenes\chicago.jpg" />
     <Content Include="Content\Imagenes\Historia\imgl.gif" />
     <Content Include="Content\Imagenes\Historia\imgr.gif" />
+    <Content Include="Content\Imagenes\la.jpg" />
+    <Content Include="Content\Imagenes\ny.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -661,6 +664,7 @@
     <Content Include="Views\mapa_bd\Edit.cshtml" />
     <Content Include="Views\mapa_bd\Index.cshtml" />
     <Content Include="Views\Home\Buscar.cshtml" />
+    <Content Include="Views\eventos_bd\Calendario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

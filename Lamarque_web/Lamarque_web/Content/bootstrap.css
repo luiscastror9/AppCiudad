@@ -6156,7 +6156,6 @@ body.modal-open,
   text-indent: -999px;
   cursor: pointer;
   border: 1px solid #ffffff;
-  border-radius: 10px;
 }
 
 .carousel-indicators .active {
