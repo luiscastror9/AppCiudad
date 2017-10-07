@@ -3,11 +3,12 @@
 @{
     ViewBag.Title = "Servicios";
 }
-
-<h1 class="titulo">Servicios</h1>
+<div class="caja-servicios">
+    <h1 class="titulo">Servicios</h1>
+</div>
 <br />
-<table class="table  table-hover">
-    <tr class="active">
+<table class="table table-striped">
+    <tr class="info">
         <th>
             @Html.DisplayName("Tipo")
         </th>
@@ -41,8 +42,7 @@
     }
 
 </table>
-@Html.ActionLink("Agregar", "Create")
-<br /><br />
+@*Html.ActionLink("Agregar", "Create")*@
 @Html.ActionLink("Volver arriba", "Index")
 <br /><br />
-@Html.ActionLink("<-- Volver al Inicio", "Index", "Home")
+@*Html.ActionLink("<-- Volver al Inicio", "Index", "Home")*@
