@@ -650,10 +650,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Historia.cshtml" />
     <Content Include="Views\contacto_bd\Create.cshtml" />
-    <Content Include="Views\contacto_bd\Delete.cshtml" />
-    <Content Include="Views\contacto_bd\Details.cshtml" />
-    <Content Include="Views\contacto_bd\Edit.cshtml" />
-    <Content Include="Views\contacto_bd\Index.cshtml" />
     <Content Include="Views\servicios_bd\Create.cshtml" />
     <Content Include="Views\servicios_bd\Delete.cshtml" />
     <Content Include="Views\servicios_bd\Details.cshtml" />
@@ -664,10 +660,6 @@
     <Content Include="Views\eventos_bd\Details.cshtml" />
     <Content Include="Views\eventos_bd\Edit.cshtml" />
     <Content Include="Views\eventos_bd\Index.cshtml" />
-    <Content Include="Views\mapa_bd\Create.cshtml" />
-    <Content Include="Views\mapa_bd\Delete.cshtml" />
-    <Content Include="Views\mapa_bd\Details.cshtml" />
-    <Content Include="Views\mapa_bd\Edit.cshtml" />
     <Content Include="Views\mapa_bd\Index.cshtml" />
     <Content Include="Views\Home\Buscar.cshtml" />
     <Content Include="Views\eventos_bd\Calendario.cshtml" />
