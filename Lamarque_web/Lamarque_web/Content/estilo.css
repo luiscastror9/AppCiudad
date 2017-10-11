@@ -1,19 +1,19 @@
-﻿.nav-transparente {
-    opacity: 0.9;
+﻿.navbar-inverse {
+    background: #424242 !important;
+    border-radius: 0 !important;
     /*Sombra*/
-    -webkit-box-shadow: 0px 7px 5px -1px rgba(0,0,0,0.12);
-    -moz-box-shadow: 0px 7px 5px -1px rgba(0,0,0,0.12);
-    box-shadow: 0px 7px 5px -1px rgba(0,0,0,0.12);
-    background: #424242;
-    color: #ffffff;
+    -webkit-box-shadow: 0px 7px 5px -1px rgba(0,0,0,0.12) !important;
+    -moz-box-shadow: 0px 7px 5px -1px rgba(0,0,0,0.12) !important;
+    box-shadow: 0px 7px 5px -1px rgba(0,0,0,0.12) !important;
 }
-
 #logo {
     color: #40CCDC;
     font-size: 2em;
+    text-decoration: none;
 }
-
-
+.navbar-inverse .navbar-nav > li > a {
+    color: #ECEAE9 !important;
+}
 /*Imagenes de fondo en los titulos*/
 .fondo-servicios {
     background-image: url(/Content/Imagenes/fondo-servicios.jpg);
