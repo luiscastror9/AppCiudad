@@ -27,8 +27,11 @@ namespace Lamarque_web.Models
     
         public virtual DbSet<contacto_bd> contacto_bd { get; set; }
         public virtual DbSet<eventos_bd> eventos_bd { get; set; }
-        public virtual DbSet<mapa_bd> mapa_bd { get; set; }
         public virtual DbSet<servicios_bd> servicios_bd { get; set; }
-        public virtual DbSet<usuarios_bd> usuarios_bd { get; set; }
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
     }
 }

@@ -8,18 +8,17 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/estilo.css")
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
+        <div class="container-fluid col-md-8 col-md-offset-2">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a id="logo" href="~/Home/Index">Lamarque</a>
+                <p class="logo">Lamarque</p>
             </div>
             <ul class="nav navbar-nav">
                 <li>  -  </li>
@@ -31,9 +30,9 @@
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="~/eventos_bd/Index">Eventos</a></li>
+                        <li><a href="~/eventos_bd/Index">Calendario</a></li>
                         <li><a href="~/servicios_bd/Index">Servicios</a></li>
-                        <li><a href="~/mapa_bd/Index">Mapa</a></li>
+                        <li><a href="~/Home/Mapa">Mapa</a></li>
                     </ul>
                 </li>
                 <li><a href="~/contacto_bd/Create">Contacto</a></li>
@@ -62,9 +61,47 @@
     <div class="body-content col-md-8 col-md-offset-2">
         <br />
         @RenderBody()
+        <br /><br /><br />
     </div>
     <footer>
+        <div >
+            <div class="izquierda">
+                <table>
+                    <tr>
+                        <td class="logo-pie">Lamarque</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul class="telefonos">
+                                <li><i class="glyphicon glyphicon-map-marker"></i> Provincia: Río Negro</li>
+                                <li><i class="glyphicon glyphicon-map-marker"></i> Departamento: Avellaneda</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
 
+            <div class="Centro">
+
+            </div>
+
+            <div class='derecha'>
+                <table>
+                    <tr>
+                        <td><h4>Telefonos utiles:</h4></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul class="telefonos">
+                                <li><i class="glyphicon glyphicon-earphone"></i> 107 | Hospital</li>
+                                <li><i class="glyphicon glyphicon-earphone"></i> 101 | Policía</li>
+                                <li><i class="glyphicon glyphicon-earphone"></i> 100 | Bomberos Voluntarios</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

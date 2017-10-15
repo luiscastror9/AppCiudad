@@ -1,9 +1,17 @@
-﻿body {
+﻿@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
     font-family: 'Raleway', sans-serif;
     background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
     background-attachment: fixed;
 }
 
+/*Nav*/
 .navbar-inverse {
     background: #424242 !important;
     border: none !important; 
@@ -12,95 +20,222 @@
     -moz-box-shadow: 0px 7px 5px -1px rgba(0,0,0,0.12) !important;
     box-shadow: 0px 7px 5px -1px rgba(0,0,0,0.12) !important;
 }
-#logo {
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #ECEAE9 !important;
+}
+
+.logo {
     color: #40CCDC;
     font-size: 2em;
     text-decoration: none;
     margin-left: 20px;
 }
-.navbar-inverse .navbar-nav > li > a {
-    color: #ECEAE9 !important;
+/*---------------------------------------------------------------*/
+
+/*Home*/
+.contenedor-home {
+    margin: auto;
+    width: 100%;
+    height: 400px;
+    background-image: url("Imagenes/fondo-mapa.jpg");
+    border-radius: 1%;
+    display: table;
 }
 
-.usuarios{
-    padding-right: 100px;
+.contenedor-home h1 {
+    position: relative;
+    float: left;
+    color: #ffffff;
+    font-size: 8em;
 }
 
-.navbar-nav{
-    margin-left: 100px;
+.subnav {
+    position: relative;
+    display: table;
+    margin: auto;
 }
 
-.navbar-form{
-    margin-left: 120px;
+    .boton1 {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        float: left;
+        margin-top: 50px;
+        text-decoration: none;
+    }
+
+    .boton2 {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        float: left;
+        margin-top: 50px;
+        border-radius: 4%;
+    }
+
+    .boton3 {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        float: left;
+        margin-top: 50px;
+    }
+
+    .boton4 {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        float: left;
+        margin-top: 50px;
+    }
+
+        .espacio1 {
+            width: 100px;
+            height: 200px;
+            position: relative;
+            float: left;
+        }
+
+        .espacio2 {
+            width: 100px;
+            height: 200px;
+            position: relative;
+            float: left;
+        }
+
+        .espacio3 {
+            width: 100px;
+            height: 200px;
+            position: relative;
+            float: left;
+        }
+
+.grande {
+    font-size: 10em;
+    color: #424242;
 }
+
+.boton-titulo1 {
+    color: #424242;
+    padding-left: 40px;
+}
+.boton-titulo2 {
+    color: #424242;
+    padding-left: 45px;
+}
+.boton-titulo3 {
+    color: #424242;
+    padding-left: 20px;
+}
+.boton-titulo4 {
+    color: #424242;
+    padding-left: 25px;
+}
+
+/*-----------------------------------------------*/
 /*Imagenes de fondo en los titulos*/
 .fondo-servicios {
+    background-attachment: fixed;
+    margin: auto;
     background-image: url(/Content/Imagenes/fondo-servicios.jpg);
-    color: #ffffff;
-    font-size: 1em;
-    padding: 5px;
+    padding: 20px;
+    padding-left: 200px !important;
 }
 
     .fondo-servicios h1 {
+        width: 150px;
+        color: #ffffff;
         margin-left: 20px;
+        background-color: #000000;
     }
 
 .fondo-mapa {
+    margin: auto;
     background-image: url(/Content/Imagenes/fondo-mapa.jpg);
     color: #ffffff;
     font-size: 1em;
-    padding: 5px;
+    padding: 20px;
+    padding-left: 200px !important;
 }
 
     .fondo-mapa h1 {
+        color: #ffffff;
         margin-left: 20px;
+        background-color: #000000;
+        width: 100px;
     }
 
 .fondo-historia {
+    margin: auto;
     background-image: url(/Content/Imagenes/fondo-historia.jpeg);
     color: #ffffff;
     font-size: 1em;
-    padding: 5px;
+    padding: 20px;
+    padding-left: 200px !important;
 }
 
     .fondo-historia h1 {
+        width: 130px;
+        color: #ffffff;
         margin-left: 20px;
+        background-color: #000000;
     }
 
 .fondo-museo {
-    background-image: url(/Content/Imagenes/fondo-museo.png);
+    margin: auto;
+    background-image: url(/Content/Imagenes/fondo-historia.jpeg);
+    //background-image: url(/Content/Imagenes/fondo-museo.png);
     color: #ffffff;
     font-size: 1em;
-    padding: 5px;
+    padding: 20px;
+    padding-left: 200px !important;
 }
 
     .fondo-museo h1 {
+        color: #ffffff;
         margin-left: 20px;
+        background-color: #000000;
+        width: 380px;
     }
 
 .fondo-contacto {
-    background-image: url(/Content/Imagenes/fondo-contacto.jpeg);
+    margin: auto;
+    background-image: url(/Content/Imagenes/fondo-contacto2.jpg);
+    background-attachment: fixed;
     color: #ffffff;
     font-size: 1em;
-    padding: 5px;
+    padding: 20px;
+    padding-left: 200px !important;
 }
 
     .fondo-contacto h1 {
+        color: #ffffff;
         margin-left: 20px;
+        background-color: #000000;
+        width: 155px;
     }
 
 .fondo-eventos {
+    width: 100%;
+    margin: auto;
     background-image: url(/Content/Imagenes/fondo-eventos.jpg);
     color: #ffffff;
     font-size: 1em;
-    padding: 5px;
+    padding: 20px;
+    padding-left: 200px !important;
 }
 
     .fondo-eventos h1 {
+        color: #ffffff;
         margin-left: 20px;
+        background-color: #000000;
+        width: 182px;
     }
 
 .fondo-inicio {
+    width: 70%;
+    margin: auto;
     background-image: url(/Content/Imagenes/fondo-inicio.jpg);
     color: #ffffff;
     font-size: 1em;
@@ -111,8 +246,75 @@
         margin-left: 20px;
     }
 
-/*Titulo en las imagenes*/
-.titulo {
-    font-family: 'Raleway', sans-serif;
-}
+        /*Titulo en las imagenes*/
+        .titulo {
+            font-family: 'Raleway', sans-serif;
+        }
 /*---------------------------*/
+
+/*HISTORIA*/
+.historia-imagenes {
+    padding: 10px;
+    float: right;
+    margin: 0px 0px 10px 10px;
+    border-radius: 5% !important;
+}
+
+.historia-texto {
+    margin: 10px 0px 0px 0px;
+}
+/*------------------------------*/
+
+/*PIE*/
+footer {
+    position: relative;
+    /* Altura total del footer en px con valor negativo */
+    margin-top: -50px;
+    /* Altura del footer en px. Se han restado los 5px del margen
+               superior mas los 5px del margen inferior
+            */
+    height: 150px;
+    padding: 5px 0px;
+    clear: both;
+    background: #424242;
+    color: #fff;
+}
+/* Esta clase define la anchura del contenido y la posicion centrada 
+           El contenido queda centrado y limitado, pero la cabecera y el pie
+           llegan hasta los limites del navegador.
+        */
+.define {
+    width: 960px;
+    margin: 0 auto;
+    float: right;
+}
+
+.izquierda {
+    float: left;
+    margin-left: 300px;
+}
+
+    .logo-pie {
+        color: #ffffff;
+        font-size: 2em;
+        text-decoration: none;
+        float: left;
+    }
+
+.centro{
+
+}
+
+.derecha{
+    float: right;
+    margin-right: 300px;
+}
+
+.telefonos {
+    list-style: none;
+    padding: 5px;
+}
+    .telefonos > li {
+        padding: 5px;
+    }
+

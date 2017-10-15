@@ -1,0 +1,100 @@
+﻿@model Lamarque_web.Models.resultadobusqueda
+@{
+    ViewBag.Title = "Buscar";
+}
+<h1 class="titulo">Resultados de la busqueda</h1>
+<br />
+<br />
+
+@if (Model.servicios == null && Model.eventos == null)
+{
+    <h4 class="titulo">No hay resultados disponibles...</h4>
+
+}
+else
+{
+    if (Model.servicios.Count == 0)
+    {
+        if (Model.eventos.Count > 0)
+        {
+            <h4 class="titulo">Eventos.</h4>
+            <table class="table table-bordered">
+                <tr class="active">
+                    <th>
+                        @Html.DisplayName("Descripcion")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Empieza")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Termina")
+                    </th>
+                </tr>
+                @foreach (var itemevento in Model.eventos)
+                {
+                    <tr>
+                        <td>
+                            @itemevento.descripcion
+                        </td>
+                        <td>
+                            @itemevento.startDate
+                        </td>
+                        <td>
+                            @itemevento.endDate
+                        </td>
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <h4 class="titulo">No hay resultados disponibles...</h4>
+        }
+    }
+    else if (Model.eventos.Count == 0)
+    {
+        if (Model.servicios.Count > 0)
+        {
+            <h4 class="titulo">Servicios.</h4>
+            <table class="table table-bordered">
+                <tr class="active">
+                    <th>
+                        @Html.DisplayName("Tipo")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Nombre")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Contacto")
+                    </th>
+                </tr>
+                @foreach (var itemservicios in Model.servicios)
+                {
+                    <tr>
+                        <td>
+                            @itemservicios.tipo
+                        </td>
+                        <td>
+                            @itemservicios.nombre
+                        </td>
+                        <td>
+                            @itemservicios.descripcion
+                        </td>
+
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <h4 class="titulo">No hay resultados disponibles...</h4>
+        }
+    }
+    else
+    {
+        <h4 class="titulo">No hay resultados disponibles...</h4>
+    }
+}
+<br />
+<br />
+@Html.ActionLink("<-- Volver al Inicio", "Index")

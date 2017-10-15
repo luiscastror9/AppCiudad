@@ -52,6 +52,9 @@
     <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="DayPilot.Web.Mvc">
+      <HintPath>..\..\..\..\..\Downloads\DayPilotLiteMvc-1.5.434\Binary\Mvc5\DayPilot.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
     </Reference>
@@ -203,13 +206,27 @@
     <Compile Include="Controllers\eventos_bdController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\mapa_bdController.cs" />
     <Compile Include="Controllers\servicios_bdController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AspNetRoles.cs">
+      <DependentUpon>ModelLamarque.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaims.cs">
+      <DependentUpon>ModelLamarque.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogins.cs">
+      <DependentUpon>ModelLamarque.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUsers.cs">
+      <DependentUpon>ModelLamarque.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\contacto_bd.cs">
+      <DependentUpon>ModelLamarque.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
       <DependentUpon>ModelLamarque.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\eventos_bd.cs">
@@ -217,9 +234,6 @@
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\mapa_bd.cs">
-      <DependentUpon>ModelLamarque.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\ModelLamarque.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -239,9 +253,6 @@
     <Compile Include="Models\servicios_bd.cs">
       <DependentUpon>ModelLamarque.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\usuarios_bd.cs">
-      <DependentUpon>ModelLamarque.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -251,6 +262,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\estilo.css" />
+    <Content Include="Content\home.css" />
+    <Content Include="Content\Imagenes\fondo-contacto2.jpg" />
     <Content Include="Content\Imagenes\fondo-inicio.jpg" />
     <Content Include="Content\Imagenes\fondo-servicios.jpg" />
     <Content Include="Content\Imagenes\fondo-contacto.jpeg" />
@@ -260,6 +273,10 @@
     <Content Include="Content\Imagenes\Historia\imgl.gif" />
     <Content Include="Content\Imagenes\Historia\imgr.gif" />
     <Content Include="Content\Imagenes\fondo-mapa.jpg" />
+    <Content Include="Content\Imagenes\Iconos\book.svg" />
+    <Content Include="Content\Imagenes\Iconos\calendar.svg" />
+    <Content Include="Content\Imagenes\Iconos\location.svg" />
+    <Content Include="Content\Imagenes\Iconos\office.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -286,6 +303,15 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\ckeditor.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Scripts\ckeditor\CHANGES.md" />
     <Content Include="Scripts\ckeditor\LICENSE.md" />
     <Content Include="Scripts\ckeditor\plugins\scayt\CHANGELOG.md" />
@@ -301,6 +327,7 @@
     <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
     <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Scripts\ckeditor\skins\moono-lisa\readme.md" />
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\ckeditor\adapters\jquery.js" />
     <Content Include="Scripts\ckeditor\build-config.js" />
     <Content Include="Scripts\ckeditor\ckeditor.js" />
@@ -610,15 +637,6 @@
     <Content Include="Scripts\ckeditor\skins\moono-lisa\images\refresh.png" />
     <Content Include="Scripts\ckeditor\skins\moono-lisa\images\spinner.gif" />
     <Content Include="Scripts\ckeditor\styles.js" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\jquery-3.2.1.slim.js" />
@@ -633,6 +651,7 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\typed.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -676,10 +695,10 @@
     <Content Include="Views\eventos_bd\Delete.cshtml" />
     <Content Include="Views\eventos_bd\Details.cshtml" />
     <Content Include="Views\eventos_bd\Edit.cshtml" />
-    <Content Include="Views\eventos_bd\Index.cshtml" />
-    <Content Include="Views\mapa_bd\Index.cshtml" />
     <Content Include="Views\Home\Buscar.cshtml" />
-    <Content Include="Views\eventos_bd\Calendario.cshtml" />
+    <Content Include="Views\Home\Mapa.cshtml" />
+    <Content Include="Views\eventos_bd\Index.cshtml" />
+    <Content Include="Views\servicios_bd\Buscar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

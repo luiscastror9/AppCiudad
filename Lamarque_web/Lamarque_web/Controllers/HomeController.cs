@@ -21,13 +21,6 @@ namespace Lamarque_web.Controllers
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
         public ActionResult Buscar()
         {
             return View();
@@ -51,8 +44,12 @@ namespace Lamarque_web.Controllers
                 res.servicios = y;
                 return View(res);
             }
-
-       
         }
+
+        public ActionResult Mapa()
+        {
+            return View();
+        }
+
     }
 }

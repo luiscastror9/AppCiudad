@@ -123,5 +123,29 @@ namespace Lamarque_web.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Buscar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Buscar(FormCollection collection)
+        {
+            string val = collection["busqueda_txt"];
+            List<servicios_bd> y = db.servicios_bd.Where(a => a.descripcion.Contains(val) || a.tipo.Contains(val) || a.nombre.Contains(val)).ToList();
+
+            Models.resultadobusqueda res = new Models.resultadobusqueda();
+            if (String.IsNullOrEmpty(val))
+            {
+                return View(res);
+            }
+
+            else
+            {
+                res.servicios = y;
+                return View(res);
+            }
+        }
     }
 }
