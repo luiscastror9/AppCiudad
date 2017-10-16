@@ -4,6 +4,7 @@
     <EntitySetMapping Name="contacto_bd">
       <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.contacto_bd">
         <MappingFragment StoreEntitySet="contacto_bd">
+          <ScalarProperty Name="asunto" ColumnName="asunto" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="correo" ColumnName="correo" />
@@ -95,5 +96,15 @@
         <ScalarProperty Name="Id" ColumnName="RoleId" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="telefonos_bd">
+      <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.telefonos_bd">
+        <MappingFragment StoreEntitySet="telefonos_bd">
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

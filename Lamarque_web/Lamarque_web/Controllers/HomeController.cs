@@ -51,5 +51,14 @@ namespace Lamarque_web.Controllers
             return View();
         }
 
+        public ActionResult Clima()
+        {
+            return View();
+        }
+
+        public ActionResult Telefonos()
+        {
+            return View();
+        }
     }
 }

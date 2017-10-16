@@ -70,6 +70,7 @@
     <Property Name="correo" Type="nvarchar" MaxLength="50" />
     <Property Name="descripcion" Type="nvarchar(max)" />
     <Property Name="tipo" Type="nvarchar" MaxLength="50" />
+    <Property Name="asunto" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="eventos_bd">
     <Key>
@@ -88,6 +89,15 @@
     <Property Name="tipo" Type="nvarchar" MaxLength="50" />
     <Property Name="nombre" Type="nvarchar" MaxLength="50" />
     <Property Name="descripcion" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="telefonos_bd">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="telefono" Type="nvarchar" MaxLength="50" />
+    <Property Name="direccion" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
     <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
@@ -155,6 +165,7 @@
     <EntitySet Name="contacto_bd" EntityType="Self.contacto_bd" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="eventos_bd" EntityType="Self.eventos_bd" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="servicios_bd" EntityType="Self.servicios_bd" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="telefonos_bd" EntityType="Self.telefonos_bd" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
       <End Role="AspNetUsers" EntitySet="AspNetUsers" />
       <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />

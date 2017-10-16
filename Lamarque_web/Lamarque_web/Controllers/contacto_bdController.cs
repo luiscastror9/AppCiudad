@@ -46,7 +46,7 @@ namespace Lamarque_web.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,nombre,correo,descripcion,tipo")] contacto_bd contacto_bd)
+        public ActionResult Create([Bind(Include = "Id,nombre,correo,descripcion,tipo,asunto")] contacto_bd contacto_bd)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace Lamarque_web.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,nombre,correo,descripcion,tipo")] contacto_bd contacto_bd)
+        public ActionResult Edit([Bind(Include = "Id,nombre,correo,descripcion,tipo,asunto")] contacto_bd contacto_bd)
         {
             if (ModelState.IsValid)
             {

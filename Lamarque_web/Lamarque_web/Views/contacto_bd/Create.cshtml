@@ -4,7 +4,7 @@
     ViewBag.Title = "Contacto";
 }
 
-@{ 
+@{
     var listado = new List<SelectListItem>()
     {
         new SelectListItem()
@@ -48,13 +48,20 @@
         </div>
 
         <div class="form-group">
+            @Html.Label("Asunto", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.asunto, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.asunto, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
             @Html.Label("Descripcion", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.TextAreaFor(model => model.descripcion)
                 @Html.ValidationMessageFor(model => model.descripcion, "", new { @class = "text-danger" })
             </div>
         </div>
-
 
         <div class="form-group">
             @Html.Label("Tipo", htmlAttributes: new { @class = "control-label col-md-2" })

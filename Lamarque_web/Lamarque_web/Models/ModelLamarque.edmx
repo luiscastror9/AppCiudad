@@ -75,6 +75,7 @@
           <Property Name="correo" Type="nvarchar" MaxLength="50" />
           <Property Name="descripcion" Type="nvarchar(max)" />
           <Property Name="tipo" Type="nvarchar" MaxLength="50" />
+          <Property Name="asunto" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="eventos_bd">
           <Key>
@@ -93,6 +94,15 @@
           <Property Name="tipo" Type="nvarchar" MaxLength="50" />
           <Property Name="nombre" Type="nvarchar" MaxLength="50" />
           <Property Name="descripcion" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="telefonos_bd">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="50" />
+          <Property Name="telefono" Type="nvarchar" MaxLength="50" />
+          <Property Name="direccion" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
           <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
@@ -160,6 +170,7 @@
           <EntitySet Name="contacto_bd" EntityType="Self.contacto_bd" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="eventos_bd" EntityType="Self.eventos_bd" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="servicios_bd" EntityType="Self.servicios_bd" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="telefonos_bd" EntityType="Self.telefonos_bd" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
             <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
@@ -190,6 +201,7 @@
           <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="asunto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="eventos_bd">
           <Key>
@@ -230,6 +242,7 @@
             <End Role="AspNetRoles" EntitySet="AspNetRoles" />
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
           </AssociationSet>
+          <EntitySet Name="telefonos_bd" EntityType="DB_A2A1B8_netbd1Model.telefonos_bd" />
         </EntityContainer>
         <EntityType Name="C__MigrationHistory">
           <Key>
@@ -322,6 +335,15 @@
           <End Type="DB_A2A1B8_netbd1Model.AspNetRoles" Role="AspNetRoles" Multiplicity="*" />
           <End Type="DB_A2A1B8_netbd1Model.AspNetUsers" Role="AspNetUsers" Multiplicity="*" />
         </Association>
+        <EntityType Name="telefonos_bd">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -331,6 +353,7 @@
           <EntitySetMapping Name="contacto_bd">
             <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.contacto_bd">
               <MappingFragment StoreEntitySet="contacto_bd">
+                <ScalarProperty Name="asunto" ColumnName="asunto" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="correo" ColumnName="correo" />
@@ -422,6 +445,16 @@
               <ScalarProperty Name="Id" ColumnName="RoleId" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="telefonos_bd">
+            <EntityTypeMapping TypeName="DB_A2A1B8_netbd1Model.telefonos_bd">
+              <MappingFragment StoreEntitySet="telefonos_bd">
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

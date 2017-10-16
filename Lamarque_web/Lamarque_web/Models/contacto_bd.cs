@@ -19,5 +19,6 @@ namespace Lamarque_web.Models
         public string correo { get; set; }
         public string descripcion { get; set; }
         public string tipo { get; set; }
+        public string asunto { get; set; }
     }
 }
