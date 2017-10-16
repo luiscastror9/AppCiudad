@@ -8,6 +8,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/estilo.css")
+    @Styles.Render("~/Content/home.css")
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -55,15 +56,13 @@
                     }
                 </li>
             </ul>
-            <ul class="usuarios">
-                <li>@Html.Partial("_LoginPartial")</li>
-            </ul>
+                @Html.Partial("_LoginPartial")
         </div>
     </nav>
     <div class="body-content col-md-8 col-md-offset-2">
         <br />
         @RenderBody()
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </div>
     <footer>
         <div >
@@ -107,6 +106,7 @@
     </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Script/maquina.js")
     @RenderSection("scripts", required: false)
 </body>
 </html>

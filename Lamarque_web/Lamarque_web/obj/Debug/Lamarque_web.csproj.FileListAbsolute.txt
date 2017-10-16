@@ -836,7 +836,6 @@ C:\Users\Matias\Desktop\AppCiudad\AppCiudad\Lamarque_web\Lamarque_web\bin\System
 C:\Users\Matias\Desktop\AppCiudad\AppCiudad\Lamarque_web\Lamarque_web\bin\System.Web.WebPages.Razor.dll
 C:\Users\Matias\Desktop\AppCiudad\AppCiudad\Lamarque_web\Lamarque_web\bin\WebGrease.dll
 C:\Users\Matias\Desktop\AppCiudad\AppCiudad\Lamarque_web\Lamarque_web\bin\Antlr3.Runtime.pdb
-C:\Users\Matias\Desktop\AppCiudad\AppCiudad\Lamarque_web\Lamarque_web\bin\DayPilot.Web.Mvc.xml
 C:\Users\Matias\Desktop\AppCiudad\AppCiudad\Lamarque_web\Lamarque_web\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\Matias\Desktop\AppCiudad\AppCiudad\Lamarque_web\Lamarque_web\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\Matias\Desktop\AppCiudad\AppCiudad\Lamarque_web\Lamarque_web\bin\Microsoft.AI.Web.xml

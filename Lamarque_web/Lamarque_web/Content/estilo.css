@@ -31,39 +31,9 @@ body {
     text-decoration: none;
     margin-left: 20px;
 }
+
 /*---------------------------------------------------------------*/
 
-/*Home*/
-.contenedor-maquina {
-    margin: auto;
-    width: 100%;
-    height: 400px;
-    background-image: url("Imagenes/fondo-mapa.jpg");
-    border-radius: 2%;
-    display: table;
-}
-
-.contenedor-maquina h1 {
-    position: relative;
-    float: left;
-    color: #ffffff;
-    font-size: 8em;
-}
-
-
-/*.caja {
-width: 200px;
-height: 200px;
-margin-top: 50px;
-text-decoration: none;
-}
-
-.tamaño {
-    font-size: 5em;
-    color: #0A2A12;
-}*/
-
-/*-----------------------------------------------*/
 /*Imagenes de fondo en los titulos*/
 .fondo-servicios {
     background-attachment: fixed;
