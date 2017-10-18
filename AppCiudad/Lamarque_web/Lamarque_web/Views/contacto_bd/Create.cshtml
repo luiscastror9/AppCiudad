@@ -4,14 +4,32 @@
     ViewBag.Title = "Contacto";
 }
 
-<h2>Contacto.</h2>
+@{
+    var listado = new List<SelectListItem>()
+    {
+        new SelectListItem()
+        {
+            Text = "Sugerencia",
+            Value = "1"
+        },
+        new SelectListItem()
+        {
+            Text="Reclamo",
+            Value = "2",
+        }
+};
+}
 
+<div class="img-responsive fondo-contacto">
+    <h1 class="titulo">Contacto</h1>
+</div>
+
+<br>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.Label("Nombre", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -30,9 +48,17 @@
         </div>
 
         <div class="form-group">
-            @Html.Label("Descripcion", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Asunto", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.descripcion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.asunto, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.asunto, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Comentario", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.descripcion)
                 @Html.ValidationMessageFor(model => model.descripcion, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -40,7 +66,7 @@
         <div class="form-group">
             @Html.Label("Tipo", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.tipo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownList("Lista", listado, new { htmlAttributes = new { @class = "form-control input-sm" } })
                 @Html.ValidationMessageFor(model => model.tipo, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -53,5 +79,7 @@
     </div>
 }
 
-<hr />
-@Html.ActionLink("<-- Volver al Inicio", "Index", "Home")
+<script type="text/javascript" src="~/Scripts/ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+    CKEDITOR.replace("descripcion");
+</script>

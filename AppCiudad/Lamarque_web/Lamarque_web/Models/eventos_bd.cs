@@ -9,27 +9,14 @@
 
 namespace Lamarque_web.Models
 {
-    using DHTMLX.Scheduler;
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-
+    
     public partial class eventos_bd
     {
-
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [DHXJson(Alias = "id")]
         public int Id { get; set; }
-
-        [DHXJson(Alias = "text")]
         public string descripcion { get; set; }
-
-        [DHXJson(Alias = "start_date")]
         public Nullable<System.DateTime> startDate { get; set; }
-
-        [DHXJson(Alias = "end_date")]
         public Nullable<System.DateTime> endDate { get; set; }
     }
 }

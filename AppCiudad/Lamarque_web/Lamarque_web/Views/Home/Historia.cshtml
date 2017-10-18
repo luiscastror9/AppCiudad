@@ -1,43 +1,56 @@
-﻿
+﻿ 
 @{
     ViewBag.Title = "Historia";
 }
 
-<style>
-    .img {
-        border: 1px solid #999999;
-        padding: 5px;
-        float: right;
-        margin: -20px 0px 10px 10px;
-    }
-</style>
-<section>
-    <article class="histotext">
-        <h2>Historia.</h2>
-        <hr />
-        <br />
-        <img src="~/Content/Imagenes/Historia/imgr.gif" alt="" width="125" height="125" class="img-rounded img-responsive img" />
-        <p>
-            El 9 de mayo de 1900, el Poder Ejecutivo Nacional creó por decreto una nueva población en el sureste de la isla de Choele Choel. En 1901 se encomendó al ingeniero Eliseo Schieroni la mensura y subdivisión de la isla en lotes rurales de 100 hectáreas, reservando cuatro para pueblo, según ley 817, de 1.876. Finalmente se eligieron las parcelas del actual emplazamiento y recibió el nombre de Pueblo Nuevo de la Colonia Choele Choel.
-            A fines de 1930 se comienza una construcción con la intención de poner en funcionamiento las oficinas de la Gobernación del Territorio Nacional del Río Negro, ya que Viedma había sido arrasada por una inundación en 1899 y estaba en duda que siguiera como ciudad capital.
-            Confusiones en los envíos de correspondencia dirigida a Choele Choel, motivaron el cambio de denominación. Se le impuso así el nombre de Lamarque, en homenaje al ex juez letrado del territorio de Río Negro, doctor Facundo Lamarque, designación que fue ratificada por decreto Nº 125.126/1 del 20 de julio de 1942. El Doctor Lamarque se había hecho cargo de la nueva sede del Juzgado de Choele Choel tras la mencionada inundación que destruyó Viedma.
-        </p>
-        <br />
-        <h2>Museo paleontologico.</h2>
-        <hr />
-        <br />
-        <img src="~/Content/Imagenes/Historia/imgl.gif" alt="" width="125" height="125" class="img-rounded img-responsive img" />
-        <p>
-            El Museo de Lamarque es muy importante a nivel paleontológico, su grupo de trabajadores ha realizado hallazgos muy importantes y una de sus piezas es expuesta en un museo de Alemania.
-            El Museo de Lamarque comienza con un proyecto de un grupo de vecinos, hace más de 20 años. La intención era la de generar un espacio abierto a la comunidad.
-            En la actualidad el museo cuenta con una importante colección de fósiles y está participando con uno de sus ejemplares en la Mega Exposición “Dinosaurios – Gigantes de Argentina” en el Museo Lokschuppen de la Ciudad de Rosenheim en Alemania.
-            Especies Únicas en el Mundo
-            El equipo del Museo ha realizado hallazgos de especies desconocidas, gracias a esto comenzó a tener trascendencia pública. Estos fósiles empiezan a ser investigados por un equipo especializado del Museo de La Plata que los describe y los ubica en contexto de la paleontología argentina y mundial.
-            La Patagonia es un territorio en e que se han realizado varios hallazgos paleontológicos que se pueden ver en museos de la región, confirmando así, la diversidad y el valor de los yacimientos.
-            El recorrido por los museos es un atractivo para los turistas ya que brinda la posibilidad de conocer las riquezas de la Patagonia.
-            En este sentido el museo se encarga de brindar excursiones que comprenden las localidades de Lamarque y el poblado de Santa Rosa en la Provincia de Río Negro.
-        </p>
-        <br />
-        @Html.ActionLink("<-- Volver al Inicio", "Index")
-    </article>
-</section>
+<div>
+    <div class="fondo-historia">
+        <h1 class="titulo">Historia</h1>
+    </div>
+    <img src="~/Content/Imagenes/Historia/imgr.gif" alt="" width="200" height="125" class="img-responsive img-rounded historia-imagenes" />
+    <p class="historia-texto">
+    Situada sobre la Ruta Provincial Nº 250 al sudeste de la Isla Grande de Choele Choel dentro del Valle Medio de Rio Negro,  es la capital del tomate por excelencia. Esto es así porque gran parte de su economía se basa en este; tanto es así, también se celebra la conocida Fiesta Nacional del Tomate y la Producción año a año.  Además es un oasis agrícola rodeado con las aguas del río, que forma en la zona un conjunto de islas. 
+    </p>
+    <p>
+        Por otra parte, es el lugar de nacimiento del escritor y periodista Rodolfo Walsh, desaparecido el 25 de marzo de 1977, Noel Berthe, uno de los hombres más altos del mundo, quien llegó a medir 2,46 metros de altura y Sergio "orejón" Gonzalez, jugador de Lanus, es oriundo de Lamarque.
+    </p>
+    <p class="historia-texto">
+        El 9 de mayo de 1900, el Poder Ejecutivo Nacional creó por decreto una nueva población en el sureste de la isla de Choele Choel. Para 1901 se había encomendado al ingeniero Eliseo Schieroni la mensura y subdivisión de la isla en lotes rurales de 100 hectáreas, reservando cuatro para pueblo. Una vez elegidas las parcelas, se la nombró como Pueblo Nuevo de la Colonia Choele Choel.
+    </p>
+    <p class="historia-texto">
+        Por otra parte, en 1942, debido a las confusiones en los envíos de correspondencia dirigida a Choele Choel, se cambió de denominación, llamándola, por su nombre actual, Lamarque, en homenaje al ex juez Facundo Lamarque. El Doctor Lamarque se había hecho cargo de la nueva sede del Juzgado de Choele Choel debido a la inundación que destruyó Viedma en 1930 que había puesto en duda que esta siguiera como ciudad capital motivando el traslado de las oficinas de la Gobernación del Territorio Nacional del Río Negro allí. 
+    </p>
+    <p class="historia-texto">
+        Actualmente, con una población de aproximadamente 15.000 personas, Lamarque tiene una completa red de servicios. Cuenta con cinco escuelas primarias, jardín de infantes, colegio secundario y escuela de adultos y un Departamento de Educación a Distancia. También funcionan escuelas libres para adultos, una municipal de folklore y una especial.
+    </p>
+    <p class="historia-texto">
+        La salud está a cargo de un hospital rural y del sector privado. Por otra parte, existe un museo histórico, un museo paleontológico y cuatro clubes que canalizan la actividad deportiva local.
+    </p>
+    <p class="historia-texto">
+        Su actividad económica principal es frutihortícola (principalmente de tomate), vitícola, actividad maderera y apícola.
+    </p>
+    <p class="historia-texto">
+        Por otra parte, en enero, la temperatura llega a un máximo absoluto de 35 ºC, con clima seco y soleado, y en julio llega a medias de 5 ºC, con lluvia y viento.
+    </p>
+    <p class="historia-texto">
+        Cada año en marzo se homenajea al hombre que con su producción de tomate, y frutales hicieron que esta localidad sea reconocida. En este festivales participan grupos importantes de la Argentina, se realiza el divertimento llamado "tomatina" y se llevan a cabo concursos en embalaje de fruta.
+    </p>
+</div>
+<br />
+<div>
+    <div class="fondo-museo">
+        <h1 class="titulo">Museo paleontologico</h1>
+    </div>
+
+    <img src="~/Content/Imagenes/Historia/imgl.gif" alt="" width="200" height="125" class="img-responsive img-rounded historia-imagenes" />
+    <p class="historia-texto">
+        El Museo de Lamarque es muy importante a nivel paleontológico, su grupo de trabajadores ha realizado hallazgos muy importantes y una de sus piezas es expuesta en un museo de Alemania.
+        El Museo de Lamarque comienza con un proyecto de un grupo de vecinos, hace más de 20 años. La intención era la de generar un espacio abierto a la comunidad.
+        En la actualidad el museo cuenta con una importante colección de fósiles y está participando con uno de sus ejemplares en la Mega Exposición “Dinosaurios – Gigantes de Argentina” en el Museo Lokschuppen de la Ciudad de Rosenheim en Alemania.
+        Especies Únicas en el Mundo
+        El equipo del Museo ha realizado hallazgos de especies desconocidas, gracias a esto comenzó a tener trascendencia pública. Estos fósiles empiezan a ser investigados por un equipo especializado del Museo de La Plata que los describe y los ubica en contexto de la paleontología argentina y mundial.
+        La Patagonia es un territorio en e que se han realizado varios hallazgos paleontológicos que se pueden ver en museos de la región, confirmando así, la diversidad y el valor de los yacimientos.
+        El recorrido por los museos es un atractivo para los turistas ya que brinda la posibilidad de conocer las riquezas de la Patagonia.
+        En este sentido el museo se encarga de brindar excursiones que comprenden las localidades de Lamarque y el poblado de Santa Rosa en la Provincia de Río Negro.
+    </p>
+</div>

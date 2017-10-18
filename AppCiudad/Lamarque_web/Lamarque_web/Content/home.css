@@ -1,0 +1,32 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+.contenedor1 {
+    margin: auto;
+    margin-top: 80px;
+    display: table;
+    width: 100%;
+    height: 400px;
+    background-image: url("Imagenes/fondo-mapa.jpg");
+}
+
+.lamarque {
+    position: relative;
+    text-align: center;
+    margin-top: 120px;
+    color: #ffffff;
+    font-size: 8em;
+    font-family: 'Lobster', cursive;
+}
+
+
+/*.caja {
+width: 200px;
+height: 200px;
+margin-top: 50px;
+text-decoration: none;
+}
+
+.tamaño {
+    font-size: 5em;
+    color: #0A2A12;
+}*/

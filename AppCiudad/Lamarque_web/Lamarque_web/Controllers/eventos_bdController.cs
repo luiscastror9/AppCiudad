@@ -3,21 +3,19 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Lamarque_ciudad;
-using DHTMLX.Scheduler;
-using DHTMLX.Scheduler.Data;
 using Lamarque_web.Models;
+using System.Threading.Tasks;
+using DHTMLX.Scheduler.Data;
+using DHTMLX.Scheduler;
 
-namespace Lamarque_ciudad.Controllers
+namespace Lamarque_web.Controllers
 {
     public class eventos_bdController : Controller
     {
         private DB_A2A1B8_netbd1Entities db = new DB_A2A1B8_netbd1Entities();
-
 
         // GET: eventos_bd
         public ActionResult Index()
@@ -138,6 +136,7 @@ namespace Lamarque_ciudad.Controllers
             }
             base.Dispose(disposing);
         }
+
+
     }
 }
-
