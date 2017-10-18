@@ -16,7 +16,7 @@
         <AssociationConnector Association="DB_A2A1B8_netbd1Model.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
         <AssociationConnector Association="DB_A2A1B8_netbd1Model.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
         <AssociationConnector Association="DB_A2A1B8_netbd1Model.AspNetUserRoles" />
-        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.telefonos_bd" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.telefonos_bd" Width="1.5" PointX="3.375" PointY="3.125" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
