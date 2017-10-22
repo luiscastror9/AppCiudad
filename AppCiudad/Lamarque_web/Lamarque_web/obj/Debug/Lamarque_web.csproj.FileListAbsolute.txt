@@ -983,6 +983,3 @@ C:\Users\user\Documents\Visual Studio 2017\Projects\18-10Actualizacion\AppCiudad
 C:\Users\user\Documents\Visual Studio 2017\Projects\18-10Actualizacion\AppCiudad-matiasgnu2\Lamarque_web\Lamarque_web\obj\Debug\Lamarque_web.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\Visual Studio 2017\Projects\18-10Actualizacion\AppCiudad-matiasgnu2\Lamarque_web\Lamarque_web\obj\Debug\Lamarque_web.dll
 C:\Users\user\Documents\Visual Studio 2017\Projects\18-10Actualizacion\AppCiudad-matiasgnu2\Lamarque_web\Lamarque_web\obj\Debug\Lamarque_web.pdb
-C:\Users\user\Documents\Visual Studio 2017\Projects\18-10Actualizacion\AppCiudad-matiasgnu2\Lamarque_web\Lamarque_web\bin\DHTMLX.dll
-C:\Users\user\Documents\Visual Studio 2017\Projects\18-10Actualizacion\AppCiudad-matiasgnu2\Lamarque_web\Lamarque_web\bin\DHTMLX.pdb
-C:\Users\user\Documents\Visual Studio 2017\Projects\18-10Actualizacion\AppCiudad-matiasgnu2\Lamarque_web\Lamarque_web\bin\DHTMLX.xml

@@ -60,10 +60,5 @@ namespace Lamarque_web.Controllers
         {
             return View();
         }
-
-        public ActionResult eventos_bd()
-        {
-            return View();
-        }
     }
 }

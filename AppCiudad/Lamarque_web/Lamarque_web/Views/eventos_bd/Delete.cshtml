@@ -1,19 +1,16 @@
 ﻿@model Lamarque_web.Models.eventos_bd
 
 @{
-    ViewBag.Title = "Delete";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Eliminar";
 }
 
-<h2>Delete</h2>
-
-<h3>Are you sure you want to delete this?</h3>
+<h2>Eliminar</h2>
 <div>
-    <h4>eventos_bd</h4>
+    <h4>Eventos</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.descripcion)
+            @Html.DisplayName("Dscripcion:")
         </dt>
 
         <dd>
@@ -21,7 +18,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.startDate)
+            @Html.DisplayName("Empieza:")
         </dt>
 
         <dd>
@@ -29,7 +26,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.endDate)
+            @Html.DisplayName("Termina:")
         </dt>
 
         <dd>
@@ -38,13 +35,15 @@
 
     </dl>
 
-    @using (Html.BeginForm())
-    {
+    @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Eliminar" class="btn btn-default" />
         </div>
+        <div>
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+
     }
 </div>
