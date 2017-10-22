@@ -20,7 +20,31 @@ namespace Lamarque_web.Controllers
             return View(db.eventos_bd.ToList());
         }
 
+        public ActionResult Buscar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Buscar(FormCollection collection)
+        {
+            string val = collection["busqueda_eventos"];
+            List<eventos_bd> x = db.eventos_bd.Where(a => a.descripcion.Contains(val)).ToList();
+            Models.resultado_eventos res = new Models.resultado_eventos();
+            if (String.IsNullOrEmpty(val))
+            {
+                return View(res);
+            }
+
+            else
+            {
+                res.eventos = x;
+                return View(res);
+            }
+        }
+
         // GET: eventos_bd/Details/5
+        [Authorize(Roles = "AdministradorGeneral")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,6 +60,7 @@ namespace Lamarque_web.Controllers
         }
 
         // GET: eventos_bd/Create
+        [Authorize(Roles = "AdministradorGeneral")]
         public ActionResult Create()
         {
             return View();
@@ -59,6 +84,7 @@ namespace Lamarque_web.Controllers
         }
 
         // GET: eventos_bd/Edit/5
+        [Authorize(Roles = "AdministradorGeneral")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -90,6 +116,7 @@ namespace Lamarque_web.Controllers
         }
 
         // GET: eventos_bd/Delete/5
+        [Authorize(Roles = "AdministradorGeneral")]
         public ActionResult Delete(int? id)
         {
             if (id == null)

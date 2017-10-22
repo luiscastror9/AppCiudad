@@ -1,17 +1,16 @@
 ﻿@model Lamarque_web.Models.telefonos_bd
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Telefono";
 }
 
-<h2>Details</h2>
+<h2>Telefono: @Html.DisplayFor(model => model.nombre)</h2>
 
 <div>
-    <h4>telefonos_bd</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.nombre)
+            @Html.DisplayName("Nombre")
         </dt>
 
         <dd>
@@ -19,24 +18,15 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.telefono)
+            @Html.DisplayName("Telefono")
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.telefono)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.direccion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.direccion)
-        </dd>
-
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Modificar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Volver a la lista", "Index")
 </p>

@@ -21,6 +21,7 @@ namespace Lamarque_web.Controllers
         }
 
         // GET: telefonos_bd/Details/5
+        [Authorize(Roles = "AdministradorGeneral")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,6 +37,7 @@ namespace Lamarque_web.Controllers
         }
 
         // GET: telefonos_bd/Create
+        [Authorize(Roles = "AdministradorGeneral")]
         public ActionResult Create()
         {
             return View();
@@ -59,6 +61,7 @@ namespace Lamarque_web.Controllers
         }
 
         // GET: telefonos_bd/Edit/5
+        [Authorize(Roles = "AdministradorGeneral")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -90,6 +93,7 @@ namespace Lamarque_web.Controllers
         }
 
         // GET: telefonos_bd/Delete/5
+        [Authorize(Roles = "AdministradorGeneral")]
         public ActionResult Delete(int? id)
         {
             if (id == null)

@@ -1,18 +1,17 @@
 ﻿@model Lamarque_web.Models.telefonos_bd
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Eliminar telefono";
 }
 
-<h2>Delete</h2>
+<h2>Eliminar telefono</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h4>Los telefonos eliminados no podran ser recuperados.</h4>
 <div>
-    <h4>telefonos_bd</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.nombre)
+            @Html.Label("Nombre")
         </dt>
 
         <dd>
@@ -20,19 +19,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.telefono)
+            @Html.Label("Telefono")
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.telefono)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.direccion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.direccion)
         </dd>
 
     </dl>
@@ -41,8 +32,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
         </div>
     }
 </div>

@@ -1,0 +1,37 @@
+﻿@model Lamarque_web.Models.AspNetUsers
+
+@{
+    ViewBag.Title = "Eliminar usuario";
+}
+
+<h2>Eliminar a @Html.DisplayFor(model => model.UserName)</h2>
+
+<h4>Los usuarios que sean eliminados no pueden ser recuperados.</h4>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Usuario")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayName("Correo")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>

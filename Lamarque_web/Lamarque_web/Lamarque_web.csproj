@@ -208,6 +208,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\servicios_bdController.cs" />
     <Compile Include="Controllers\telefonos_bdController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -251,7 +252,9 @@
       <DependentUpon>ModelLamarque.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\resultadobusqueda.cs" />
-    <Compile Include="Models\resultados_servicios.cs" />
+    <Compile Include="Models\resultado_contacto.cs" />
+    <Compile Include="Models\resultado_servicios.cs" />
+    <Compile Include="Models\resultado_eventos.cs" />
     <Compile Include="Models\servicios_bd.cs">
       <DependentUpon>ModelLamarque.tt</DependentUpon>
     </Compile>
@@ -262,6 +265,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\almanaque.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -282,6 +286,7 @@
     <Content Include="Content\Imagenes\Iconos\calendar.svg" />
     <Content Include="Content\Imagenes\Iconos\location.svg" />
     <Content Include="Content\Imagenes\Iconos\office.svg" />
+    <Content Include="Content\panel.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -306,6 +311,7 @@
     <Content Include="Models\ModelLamarque.edmx.diagram">
       <DependentUpon>ModelLamarque.edmx</DependentUpon>
     </Content>
+    <Content Include="Scripts\almanaque.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\ckeditor.js" />
@@ -683,7 +689,6 @@
     <Content Include="Views\Account\VerifyCode.cshtml" />
     <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
     <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
     <Content Include="Views\Manage\ManageLogins.cshtml" />
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
@@ -702,14 +707,27 @@
     <Content Include="Views\Home\Buscar.cshtml" />
     <Content Include="Views\Home\Mapa.cshtml" />
     <Content Include="Views\eventos_bd\Index.cshtml" />
-    <Content Include="Views\servicios_bd\Buscar.cshtml" />
     <Content Include="Views\Home\Clima.cshtml" />
-    <Content Include="Views\contacto_bd\Create.cshtml" />
     <Content Include="Views\telefonos_bd\Create.cshtml" />
     <Content Include="Views\telefonos_bd\Delete.cshtml" />
     <Content Include="Views\telefonos_bd\Details.cshtml" />
     <Content Include="Views\telefonos_bd\Edit.cshtml" />
     <Content Include="Views\telefonos_bd\Index.cshtml" />
+    <Content Include="Views\contacto_bd\Enviado.cshtml" />
+    <Content Include="Views\contacto_bd\Create.cshtml" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
+    <Content Include="Views\Usuarios\Delete.cshtml" />
+    <Content Include="Views\Usuarios\Details.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\contacto_bd\Index.cshtml" />
+    <Content Include="Views\contacto_bd\Delete.cshtml" />
+    <Content Include="Views\contacto_bd\Details.cshtml" />
+    <Content Include="Views\eventos_bd\Buscar.cshtml" />
+    <Content Include="Views\contacto_bd\Buscar.cshtml" />
+    <Content Include="Views\servicios_bd\Buscar.cshtml" />
+    <Content Include="Views\Home\Panel.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

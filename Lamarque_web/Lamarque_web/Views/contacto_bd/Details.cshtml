@@ -1,0 +1,57 @@
+﻿@model Lamarque_web.Models.contacto_bd
+
+@{
+    ViewBag.Title = "Mensaje";
+}
+
+<h2>Mensaje de @Html.DisplayFor(model => model.nombre)</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Nombre")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Correo")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correo)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Asunto")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.asunto)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Descripcion")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Fecha")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

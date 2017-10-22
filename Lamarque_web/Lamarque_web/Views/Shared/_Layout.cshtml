@@ -9,6 +9,8 @@
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/estilo.css")
     @Styles.Render("~/Content/home.css")
+    @Styles.Render("~/Content/panel.css")
+    @Styles.Render("~/Content/almanaque.css")
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -24,23 +26,32 @@
             <ul class="nav navbar-nav">
                 <li>  -  </li>
                 <li><a href="~/Home/Index">Inicio</a></li>
-                <li><a href="~/Home/Historia">Historia</a></li>
+
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         La ciudad
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="~/eventos_bd/Create">Calendario</a></li>
-                        <li><a href="~/Home/Clima">Clima</a></li>
-                        <li><a href="~/Home/Mapa">Mapa</a></li>
-                        <li><a href="~/servicios_bd/Index">Servicios</a></li>
+                        <li><a href="~/Home/Historia">Historia</a></li>
                         <li><a href="~/telefonos_bd/Index">Telefonos utiles</a></li>
+                        <li><a href="~/Home/Clima">Clima</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Turismo
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="~/eventos_bd/Index">Eventos</a></li>
+                        <li><a href="~/servicios_bd/Index">Servicios</a></li>
+                        <li><a href="~/Home/Mapa">Mapa</a></li>
                     </ul>
                 </li>
                 <li><a href="~/contacto_bd/Create">Contacto</a></li>
-                <li>
-                    @using (Html.BeginForm("Buscar", "Home", FormMethod.Post, htmlAttributes: new { @class = "navbar-form navbar-left" }))
+                <!--<li>
+                    using (Html.BeginForm("Buscar", "Home", FormMethod.Post, htmlAttributes: new { class = "navbar-form navbar-left" }))
                     {
                         <form class="navbar-form navbar-left">
 
@@ -54,15 +65,16 @@
                             </div>
                         </form>
                     }
-                </li>
+                </li>-->
             </ul>
-                <div class="login">@Html.Partial("_LoginPartial")</div>
+            @Html.Partial("_LoginPartial")
         </div>
     </nav>
     <div class="body-content col-md-8 col-md-offset-2">
         @RenderBody()
     </div>
-    <footer>
+    <!--<footer>
+        
         <div >
             <div class="izquierda">
                 <table>
@@ -81,7 +93,9 @@
             </div>
 
             <div class="Centro">
-
+                <ul>
+                    <li>MUNICIPALIDAD DIRECCION</li>
+                </ul>
             </div>
 
             <div class='derecha'>
@@ -101,10 +115,9 @@
                 </table>
             </div>
         </div>
-    </footer>
+    </footer>-->
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/Script/maquina.js")
     @RenderSection("scripts", required: false)
 </body>
 </html>

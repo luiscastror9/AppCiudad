@@ -31,7 +31,7 @@ namespace Lamarque_web.Controllers
             string val = collection["busqueda_servicios"];
             List<servicios_bd> y = db.servicios_bd.Where(a => a.descripcion.Contains(val) || a.tipo.Contains(val) || a.nombre.Contains(val)).ToList();
 
-            Models.resultados_servicios res = new Models.resultados_servicios();
+            Models.resultado_servicios res = new Models.resultado_servicios();
             if (String.IsNullOrEmpty(val))
             {
                 return View(res);
@@ -45,6 +45,7 @@ namespace Lamarque_web.Controllers
         }
 
         // GET: servicios_bd/Details/5
+        [Authorize(Roles = "AdministradorGeneral")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -60,6 +61,7 @@ namespace Lamarque_web.Controllers
         }
 
         // GET: servicios_bd/Create
+        [Authorize(Roles = "AdministradorGeneral")]
         public ActionResult Create()
         {
             return View();
@@ -83,6 +85,7 @@ namespace Lamarque_web.Controllers
         }
 
         // GET: servicios_bd/Edit/5
+        [Authorize(Roles = "AdministradorGeneral")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -114,6 +117,7 @@ namespace Lamarque_web.Controllers
         }
 
         // GET: servicios_bd/Delete/5
+        [Authorize(Roles = "AdministradorGeneral")]
         public ActionResult Delete(int? id)
         {
             if (id == null)

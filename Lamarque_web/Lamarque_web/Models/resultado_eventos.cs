@@ -5,8 +5,8 @@ using System.Web;
 
 namespace Lamarque_web.Models
 {
-    public class resultados_servicios
+    public class resultado_eventos
     {
-        public List<servicios_bd> servicios { get; set; }
+        public List<eventos_bd> eventos { get; set; }
     }
 }

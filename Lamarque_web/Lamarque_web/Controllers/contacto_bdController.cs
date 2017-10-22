@@ -20,7 +20,31 @@ namespace Lamarque_web.Controllers
             return View(db.contacto_bd.ToList());
         }
 
+        public ActionResult Buscar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Buscar(FormCollection collection)
+        {
+            string val = collection["busqueda_contacto"];
+            List<contacto_bd> z = db.contacto_bd.Where(a => a.nombre.Contains(val) || a.asunto.Contains(val)).ToList();
+            Models.resultado_contacto res = new Models.resultado_contacto();
+            if (String.IsNullOrEmpty(val))
+            {
+                return View(res);
+            }
+
+            else
+            {
+                res.contacto = z;
+                return View(res);
+            }
+        }
+
         // GET: contacto_bd/Details/5
+        [Authorize(Roles = "AdministradorGeneral")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -46,19 +70,20 @@ namespace Lamarque_web.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,nombre,correo,descripcion,tipo,asunto")] contacto_bd contacto_bd)
+        public ActionResult Create([Bind(Include = "Id,nombre,correo,descripcion,asunto,fecha")] contacto_bd contacto_bd)
         {
             if (ModelState.IsValid)
             {
                 db.contacto_bd.Add(contacto_bd);
                 db.SaveChanges();
-                return RedirectToAction("Create");
+                return RedirectToAction("Enviado");
             }
 
             return View(contacto_bd);
         }
 
         // GET: contacto_bd/Edit/5
+        [Authorize(Roles = "AdministradorGeneral")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,7 +103,7 @@ namespace Lamarque_web.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,nombre,correo,descripcion,tipo,asunto")] contacto_bd contacto_bd)
+        public ActionResult Edit([Bind(Include = "Id,nombre,correo,descripcion,asunto,fecha")] contacto_bd contacto_bd)
         {
             if (ModelState.IsValid)
             {
@@ -90,6 +115,7 @@ namespace Lamarque_web.Controllers
         }
 
         // GET: contacto_bd/Delete/5
+        [Authorize(Roles = "AdministradorGeneral")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -122,6 +148,11 @@ namespace Lamarque_web.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public ActionResult Enviado()
+        {
+            return View();
         }
     }
 }

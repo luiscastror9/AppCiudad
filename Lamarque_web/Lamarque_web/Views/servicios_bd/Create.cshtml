@@ -4,7 +4,7 @@
     ViewBag.Title = "Agregar";
 }
 
-<h2>Agregar</h2>
+<h2>Agregar.</h2>
 
 @using (Html.BeginForm())
 {
@@ -47,5 +47,7 @@
 }
 <div>
     @Html.ActionLink("Volver a la lista", "Index")
+    <br />
+    @Html.ActionLink("Panel de control", "Panel", "Administracion")
 </div>
 

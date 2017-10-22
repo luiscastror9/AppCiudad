@@ -69,8 +69,8 @@
     <Property Name="nombre" Type="nvarchar" MaxLength="50" />
     <Property Name="correo" Type="nvarchar" MaxLength="50" />
     <Property Name="descripcion" Type="nvarchar(max)" />
-    <Property Name="tipo" Type="nvarchar" MaxLength="50" />
     <Property Name="asunto" Type="nvarchar(max)" />
+    <Property Name="fecha" Type="date" />
   </EntityType>
   <EntityType Name="eventos_bd">
     <Key>

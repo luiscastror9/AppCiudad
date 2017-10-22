@@ -5,18 +5,18 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="21c9d8c69c6f4b6f88e8be90dc92a7d6" Name="Diagram1">
-        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.contacto_bd" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.eventos_bd" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.servicios_bd" Width="1.5" PointX="0.875" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.C__MigrationHistory" Width="1.5" PointX="4.625" PointY="0.75" />
-        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.AspNetRoles" Width="1.5" PointX="7.75" PointY="2" />
-        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.AspNetUserClaims" Width="1.5" PointX="12.25" PointY="0.5" />
-        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.AspNetUserLogins" Width="1.5" PointX="12.25" PointY="3.25" />
-        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.AspNetUsers" Width="1.5" PointX="10" PointY="0.875" />
+        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.eventos_bd" Width="1.5" PointX="2.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.servicios_bd" Width="1.5" PointX="0.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.C__MigrationHistory" Width="1.5" PointX="0.5" PointY="4.875" />
+        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.AspNetRoles" Width="1.5" PointX="3.875" PointY="2.25" />
+        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.AspNetUserClaims" Width="1.5" PointX="8.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.AspNetUserLogins" Width="1.5" PointX="8.375" PointY="3.5" />
+        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.AspNetUsers" Width="1.5" PointX="6.125" PointY="1.125" />
         <AssociationConnector Association="DB_A2A1B8_netbd1Model.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
         <AssociationConnector Association="DB_A2A1B8_netbd1Model.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
         <AssociationConnector Association="DB_A2A1B8_netbd1Model.AspNetUserRoles" />
-        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.telefonos_bd" Width="1.5" PointX="3.375" PointY="3.125" />
+        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.telefonos_bd" Width="1.5" PointX="2.125" PointY="2.875" />
+        <EntityTypeShape EntityType="DB_A2A1B8_netbd1Model.contacto_bd" Width="1.5" PointX="0.5" PointY="0.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

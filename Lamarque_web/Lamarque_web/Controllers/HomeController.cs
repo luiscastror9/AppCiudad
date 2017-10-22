@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Lamarque_web.Controllers
 {
@@ -18,6 +20,33 @@ namespace Lamarque_web.Controllers
 
         public ActionResult Historia()
         {
+            return View();
+        }
+
+        [Authorize]
+        public ActionResult Panel()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                using (ApplicationDbContext db = new ApplicationDbContext())
+                {
+                    var IdUsuarioActual = User.Identity.GetUserId();
+
+                    var roleManager = new RoleManager<IdentityRole>
+                        (new RoleStore<IdentityRole>(db));
+
+                    //Creo un rol
+                    var resultado = roleManager.Create(new IdentityRole("AdministradorGeneral"));
+
+                    var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+
+                    //Agregar usuario al rol
+                    resultado = userManager.AddToRole(IdUsuarioActual, "AdministradorGeneral");
+
+                    //Usuario esta en rol?
+                }
+
+            }
             return View();
         }
 

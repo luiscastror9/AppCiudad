@@ -3,10 +3,8 @@
 @{
     ViewBag.Title = "Servicios";
 }
-<div class="img-responsive fondo-servicios">
-    <h1 class="titulo">Servicios</h1>
-</div>
-<br />
+
+<h1><i class="glyphicon glyphicon-menu-hamburger"></i> Servicios</h1>
 
 @using (Html.BeginForm("Buscar", "servicios_bd", FormMethod.Post, htmlAttributes: new { @class = "navbar-form navbar-left" }))
 {
@@ -50,15 +48,16 @@
                 @Html.DisplayFor(modelItem => item.descripcion)
             </td>
             <td>
-                @*@Html.ActionLink("Editar", "Edit", new { id = item.Id })
-    @Html.ActionLink("Ver +", "Details", new { id=item.Id }) |
-    @Html.ActionLink("Eliminar", "Delete", new { id=item.Id })*@
+                @Html.ActionLink("Modificar", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Ver +", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id=item.Id })
             </td>
         </tr>
     }
 
 </table>
-@*Html.ActionLink("Agregar", "Create")*@
+@Html.ActionLink("Agregar", "Create")
+<br /><br />
 @Html.ActionLink("Volver arriba", "Index")
 <br /><br />
-@*Html.ActionLink("<-- Volver al Inicio", "Index", "Home")*@
+@Html.ActionLink("Panel de control", "Panel", "Administracion")

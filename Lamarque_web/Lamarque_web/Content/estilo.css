@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+a{
+    color: #000000;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
@@ -33,8 +37,9 @@ body {
     margin-left: 20px;
 }
 
-.login{
-    margin-right: 20px;
+.der{
+    float: right;
+    margin-right: 30px;
 }
 /*---------------------------------------------------------------*/
 
@@ -105,7 +110,6 @@ body {
     }
 
 .fondo-eventos {
-    height: 200px;
     background-image: url(/Content/Imagenes/fondo-eventos.jpg);
 }
 
