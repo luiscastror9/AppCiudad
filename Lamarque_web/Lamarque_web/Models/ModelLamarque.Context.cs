@@ -34,5 +34,7 @@ namespace Lamarque_web.Models
         public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<telefonos_bd> telefonos_bd { get; set; }
         public virtual DbSet<contacto_bd> contacto_bd { get; set; }
+
+        public System.Data.Entity.DbSet<Lamarque_web.Controllers.RoleViewModel> RoleViewModels { get; set; }
     }
 }

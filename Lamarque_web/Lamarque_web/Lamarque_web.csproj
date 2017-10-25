@@ -714,7 +714,6 @@
     <Content Include="Views\telefonos_bd\Edit.cshtml" />
     <Content Include="Views\telefonos_bd\Index.cshtml" />
     <Content Include="Views\contacto_bd\Enviado.cshtml" />
-    <Content Include="Views\contacto_bd\Create.cshtml" />
     <Content Include="Views\Usuarios\Create.cshtml" />
     <Content Include="Views\Usuarios\Delete.cshtml" />
     <Content Include="Views\Usuarios\Details.cshtml" />
@@ -728,6 +727,10 @@
     <Content Include="Views\servicios_bd\Buscar.cshtml" />
     <Content Include="Views\Home\Panel.cshtml" />
     <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\contacto_bd\Create.cshtml" />
+    <Content Include="Views\Manage\Roles.cshtml" />
+    <Content Include="Views\Manage\CreateRole.cshtml" />
+    <Content Include="Views\Manage\AddRoleToUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
