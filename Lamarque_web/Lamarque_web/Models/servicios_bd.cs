@@ -15,8 +15,8 @@ namespace Lamarque_web.Models
     public partial class servicios_bd
     {
         public int Id { get; set; }
-        public string tipo { get; set; }
-        public string nombre { get; set; }
-        public string descripcion { get; set; }
+        public string Tipo { get; set; }
+        public string Nombre { get; set; }
+        public string Contacto { get; set; }
     }
 }

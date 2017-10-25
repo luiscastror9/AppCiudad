@@ -1,0 +1,66 @@
+﻿@model Lamarque_web.Models.resultado_contacto
+@{
+    ViewBag.Title = "Resultado de busqueda";
+}
+
+<h1 class="titulo">Resultados de busqueda</h1>
+<br />
+<br />
+@using (Html.BeginForm("Buscar", "contacto_bd", FormMethod.Post, htmlAttributes: new { @class = "navbar-form navbar-left" }))
+{
+    <form class="navbar-form navbar-left">
+
+        <div class="input-group">
+
+            <div class="form-group">
+                <input name="busqueda_contacto" type="text" class="form-control" placeholder="Buscar...">
+            </div>
+            <button id="busqueda" class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+
+        </div>
+    </form>
+}
+
+<div class="content col-md-8">
+    @if (Model.contacto.Count == 0)
+    {
+        <h4 class="titulo">No hay resultados disponibles...</h4>
+    }
+    else
+    {
+        <table class="table table-bordered">
+            <tr class="active">
+                <th>
+                    @Html.DisplayName("Nombre")
+                </th>
+                <th>
+                    @Html.DisplayName("Asunto")
+                </th>
+                <th>
+                    @Html.DisplayName("Fecha")
+                </th>
+            </tr>
+                @foreach (var itemcontacto in Model.contacto)
+                {
+                <tr>
+                    <td>
+                        @itemcontacto.Nombre
+                    </td>
+                    <td>
+                        @itemcontacto.Asunto
+                    </td>
+                    <td>
+                        @itemcontacto.Fecha
+                    </td>
+                    <td>
+                        @Html.ActionLink("Ver +", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+                    </td>
+                </tr>
+                }
+            </table>
+    }
+
+    <br /><br />
+    @Html.ActionLink("<-- Volver al Inicio", "Index")
+</div>

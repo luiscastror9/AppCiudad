@@ -12,7 +12,7 @@ namespace Lamarque_web.Controllers
 {
     public class servicios_bdController : Controller
     {
-        private DB_A2A1B8_netbd1Entities db = new DB_A2A1B8_netbd1Entities();
+        private lamarquebdEntities db = new lamarquebdEntities();
 
         // GET: servicios_bd
         public ActionResult Index()
@@ -29,7 +29,7 @@ namespace Lamarque_web.Controllers
         public ActionResult Buscar(FormCollection collection)
         {
             string val = collection["busqueda_servicios"];
-            List<servicios_bd> y = db.servicios_bd.Where(a => a.descripcion.Contains(val) || a.tipo.Contains(val) || a.nombre.Contains(val)).ToList();
+            List<servicios_bd> y = db.servicios_bd.Where(a => a.Contacto.Contains(val) || a.Tipo.Contains(val) || a.Nombre.Contains(val)).ToList();
 
             Models.resultado_servicios res = new Models.resultado_servicios();
             if (String.IsNullOrEmpty(val))

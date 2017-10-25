@@ -12,7 +12,7 @@ namespace Lamarque_web.Controllers
 {
     public class eventos_bdController : Controller
     {
-        private DB_A2A1B8_netbd1Entities db = new DB_A2A1B8_netbd1Entities();
+        private lamarquebdEntities db = new lamarquebdEntities();
 
         // GET: eventos_bd
         public ActionResult Index()

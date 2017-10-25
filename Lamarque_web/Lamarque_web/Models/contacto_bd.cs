@@ -15,10 +15,10 @@ namespace Lamarque_web.Models
     public partial class contacto_bd
     {
         public int Id { get; set; }
-        public string nombre { get; set; }
-        public string correo { get; set; }
-        public string descripcion { get; set; }
-        public string asunto { get; set; }
-        public Nullable<System.DateTime> fecha { get; set; }
+        public string Nombre { get; set; }
+        public string Correo { get; set; }
+        public Nullable<System.DateTime> Fecha { get; set; }
+        public string Asunto { get; set; }
+        public string Mensaje { get; set; }
     }
 }

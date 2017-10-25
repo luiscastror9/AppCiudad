@@ -17,7 +17,7 @@ namespace Lamarque_web.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-        private DB_A2A1B8_netbd1Entities db = new DB_A2A1B8_netbd1Entities();
+        private lamarquebdEntities db = new lamarquebdEntities();
 
         public AccountController()
         {

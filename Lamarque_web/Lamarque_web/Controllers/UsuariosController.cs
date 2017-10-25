@@ -12,7 +12,7 @@ namespace Lamarque_web.Controllers
 {
     public class UsuariosController : Controller
     {
-        private DB_A2A1B8_netbd1Entities db = new DB_A2A1B8_netbd1Entities();
+        private lamarquebdEntities db = new lamarquebdEntities();
 
         // GET: Usuarios
         public ActionResult Index()

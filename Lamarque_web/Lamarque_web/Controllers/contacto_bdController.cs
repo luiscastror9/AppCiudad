@@ -12,7 +12,7 @@ namespace Lamarque_web.Controllers
 {
     public class contacto_bdController : Controller
     {
-        private DB_A2A1B8_netbd1Entities db = new DB_A2A1B8_netbd1Entities();
+        private lamarquebdEntities db = new lamarquebdEntities();
 
         // GET: contacto_bd
         public ActionResult Index()
@@ -29,7 +29,7 @@ namespace Lamarque_web.Controllers
         public ActionResult Buscar(FormCollection collection)
         {
             string val = collection["busqueda_contacto"];
-            List<contacto_bd> z = db.contacto_bd.Where(a => a.nombre.Contains(val) || a.asunto.Contains(val)).ToList();
+            List<contacto_bd> z = db.contacto_bd.Where(a => a.Nombre.Contains(val) || a.Asunto.Contains(val)).ToList();
             Models.resultado_contacto res = new Models.resultado_contacto();
             if (String.IsNullOrEmpty(val))
             {

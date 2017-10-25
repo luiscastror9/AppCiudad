@@ -15,8 +15,7 @@ namespace Lamarque_web.Models
     public partial class telefonos_bd
     {
         public int Id { get; set; }
-        public string nombre { get; set; }
-        public string telefono { get; set; }
-        public string direccion { get; set; }
+        public string Nombre { get; set; }
+        public string Telefono { get; set; }
     }
 }
