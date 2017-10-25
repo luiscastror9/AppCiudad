@@ -35,5 +35,7 @@ namespace Lamarque_web.Models
         public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<Table> Table { get; set; }
+
+        public System.Data.Entity.DbSet<Lamarque_web.Controllers.RoleViewModel> RoleViewModels { get; set; }
     }
 }

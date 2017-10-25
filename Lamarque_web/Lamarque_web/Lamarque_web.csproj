@@ -203,12 +203,11 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ContactoController.cs" />
-    <Compile Include="Controllers\contacto_bdController.cs" />
     <Compile Include="Controllers\eventos_bdController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\servicios_bdController.cs" />
-    <Compile Include="Controllers\telefonos_bdController.cs" />
+    <Compile Include="Controllers\ServiciosController.cs" />
+    <Compile Include="Controllers\TelefonosController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -703,11 +702,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Historia.cshtml" />
-    <Content Include="Views\servicios_bd\Create.cshtml" />
-    <Content Include="Views\servicios_bd\Delete.cshtml" />
-    <Content Include="Views\servicios_bd\Details.cshtml" />
-    <Content Include="Views\servicios_bd\Edit.cshtml" />
-    <Content Include="Views\servicios_bd\Index.cshtml" />
     <Content Include="Views\eventos_bd\Create.cshtml" />
     <Content Include="Views\eventos_bd\Delete.cshtml" />
     <Content Include="Views\eventos_bd\Details.cshtml" />
@@ -716,11 +710,6 @@
     <Content Include="Views\Home\Mapa.cshtml" />
     <Content Include="Views\eventos_bd\Index.cshtml" />
     <Content Include="Views\Home\Clima.cshtml" />
-    <Content Include="Views\telefonos_bd\Create.cshtml" />
-    <Content Include="Views\telefonos_bd\Delete.cshtml" />
-    <Content Include="Views\telefonos_bd\Details.cshtml" />
-    <Content Include="Views\telefonos_bd\Edit.cshtml" />
-    <Content Include="Views\telefonos_bd\Index.cshtml" />
     <Content Include="Views\Usuarios\Create.cshtml" />
     <Content Include="Views\Usuarios\Delete.cshtml" />
     <Content Include="Views\Usuarios\Details.cshtml" />
@@ -728,17 +717,27 @@
     <Content Include="Views\Usuarios\Index.cshtml" />
     <Content Include="Views\eventos_bd\Buscar.cshtml" />
     <Content Include="Views\Contacto\Buscar.cshtml" />
-    <Content Include="Views\servicios_bd\Buscar.cshtml" />
+    <Content Include="Views\Servicios\Buscar.cshtml" />
     <Content Include="Views\Home\Panel.cshtml" />
     <Content Include="Views\Manage\Index.cshtml" />
     <Content Include="Views\Manage\Roles.cshtml" />
     <Content Include="Views\Manage\CreateRole.cshtml" />
-    <Content Include="Views\Manage\AddRoleToUser.cshtml" />
     <Content Include="Views\Contacto\Create.cshtml" />
     <Content Include="Views\Contacto\Delete.cshtml" />
     <Content Include="Views\Contacto\Details.cshtml" />
     <Content Include="Views\Contacto\Edit.cshtml" />
     <Content Include="Views\Contacto\Index.cshtml" />
+    <Content Include="Views\Servicios\Create.cshtml" />
+    <Content Include="Views\Servicios\Delete.cshtml" />
+    <Content Include="Views\Servicios\Details.cshtml" />
+    <Content Include="Views\Servicios\Edit.cshtml" />
+    <Content Include="Views\Servicios\Index.cshtml" />
+    <Content Include="Views\Telefonos\Create.cshtml" />
+    <Content Include="Views\Telefonos\Delete.cshtml" />
+    <Content Include="Views\Telefonos\Details.cshtml" />
+    <Content Include="Views\Telefonos\Edit.cshtml" />
+    <Content Include="Views\Telefonos\Index.cshtml" />
+    <Content Include="Views\Manage\AddRoleToUser.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

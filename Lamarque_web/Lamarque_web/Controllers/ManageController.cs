@@ -46,7 +46,6 @@ namespace Lamarque_web.Controllers
         {
             return View();
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult CreateRole(RoleViewModel model)
@@ -59,15 +58,13 @@ namespace Lamarque_web.Controllers
             }
 
             var newRole = new IdentityRole(model.Name);
-            //devuelve el modelo a la vista
             var result = RoleManager.Create(newRole);
 
             if(result.Succeeded)
             {
                 return RedirectToAction("Roles");
             }
-
-
+            //devuelve el modelo a la vista
             return View();
         }
 
@@ -83,7 +80,7 @@ namespace Lamarque_web.Controllers
             //get the role
             var _user = UserManager.FindByEmail(user);
             var _role = RoleManager.FindByName(role);
-            //El usuario ya tiene rol?
+            //El usuario ya tiene el rol::_==??
             var result = UserManager.AddToRole(_user.Id, role);
             ViewBag.Errores = result.Errors;
             if (result.Succeeded)

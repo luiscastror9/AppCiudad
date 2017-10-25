@@ -1,0 +1,61 @@
+﻿@model Lamarque_web.Models.resultado_servicios
+@{
+    ViewBag.Title = "Resultados de busqueda";
+}
+
+<h1 class="titulo">Resultados de busqueda</h1>
+<br />
+<br />
+
+@using (Html.BeginForm("Buscar", "servicios_bd", FormMethod.Post, htmlAttributes: new { @class = "navbar-form navbar-left" }))
+{
+    <form class="navbar-form navbar-left">
+
+        <div class="input-group">
+
+            <div class="form-group">
+                <input name="busqueda_servicios" type="text" class="form-control" placeholder="Buscar...">
+            </div>
+            <button id="busqueda" class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+
+        </div>
+    </form>
+}
+
+@if (Model.servicios.Count == 0)
+{
+    <h4 class="titulo">No hay resultados disponibles...</h4>
+}
+else
+{
+    <table class="table table-bordered">
+        <tr class="active">
+            <th>
+                @Html.DisplayName("Tipo")
+            </th>
+            <th>
+                @Html.DisplayName("Nombre")
+            </th>
+            <th>
+                @Html.DisplayName("Contacto")
+            </th>
+        </tr>
+        @foreach (var itemservicios in Model.servicios)
+        {
+            <tr>
+                <td>
+                    @itemservicios.tipo
+                </td>
+                <td>
+                    @itemservicios.nombre
+                </td>
+                <td>
+                    @itemservicios.descripcion
+                </td>
+            </tr>
+        }
+    </table>
+}
+
+<br /><br />
+@Html.ActionLink("<-- Volver al Inicio", "Index")

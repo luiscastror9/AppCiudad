@@ -2,9 +2,17 @@
 
 @{
     ViewBag.Title = "CreateRole";
+    var errores = ViewBag.Errores as IEnumerable<String>;
 }
 
 <h2>CreateRole</h2>
+
+<ul>
+    @foreach (var item in errores)
+    {
+        <li>@item</li>
+    }
+</ul>
 
 @using (Html.BeginForm()) 
 {
