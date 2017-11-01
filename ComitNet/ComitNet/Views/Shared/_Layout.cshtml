@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamarque - @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/estilos.css")
+    @Styles.Render("~/Content/home.css")
+    @Styles.Render("~/Content/almanaque.css")
+    @Styles.Render("~/Content/historia.css")
+</head>
+<body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="logo" href="~/Home/Index">Lamarque</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">La ciudad<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="~/Home/Historia">Historia</a></li>
+                                <li class="divider"></li>
+                                <li><a href="~/Telefonos/Index">Telefonos utiles</a></li>
+                                <li class="divider"></li>
+                                <li><a href="~/Home/Clima">Clima</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Turismo<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="~/Calendario/Calendario">Calendario</a></li>
+                                <li class="divider"></li>
+                                <li><a href="~/Servicios/Index">Servicios</a></li>
+                                <li class="divider"></li>
+                                <li><a href="~/Home/Mapa">Mapa</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="~/Contacto/Create">Contacto</a></li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+
+        <div class="body-content col-md-8 col-md-offset-2">
+            @RenderBody()
+        </div>
+
+        <footer>
+            <div class="col-md-12 ">
+                <div class="col-md-4">
+                    <a class="logo-pie">Lamarque</a>
+                    <h5><i class="glyphicon glyphicon-map-marker"></i> Argentina</h5>
+                    <h5><i class="glyphicon glyphicon-map-marker"></i> Río Negro</h5>
+                    <h5><i class="glyphicon glyphicon-map-marker"></i> Departamento de Avellaneda</h5>
+                </div>
+
+                <div class="col-md-4">
+
+                </div>
+
+                <div class="col-md-4 text-right">
+                    <h4>Telefonos utiles</h4>
+                    <h5><i class="glyphicon glyphicon-earphone"></i> 107 | Hospital</h5>
+                    <h5><i class="glyphicon glyphicon-earphone"></i> 101 | Policía</h5>
+                    <h5><i class="glyphicon glyphicon-earphone"></i> 100 | Bomberos Voluntarios</h5>
+                </div>
+            </div>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>
