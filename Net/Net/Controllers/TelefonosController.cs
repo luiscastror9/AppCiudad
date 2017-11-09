@@ -12,7 +12,7 @@ namespace Net.Controllers
 {
     public class TelefonosController : Controller
     {
-        private lamarqueBDEntities db = new lamarqueBDEntities();
+        private LamarqueBDEntities db = new LamarqueBDEntities();
 
         // GET: Telefonos
         public ActionResult Index()
