@@ -13,6 +13,21 @@ namespace Net.Controllers
             return View();
         }
 
+        public ActionResult Historia()
+        {
+            return View();
+        }
+
+        public ActionResult Museo()
+        {
+            return View();
+        }
+
+        public ActionResult Fiesta_tomate()
+        {
+            return View();
+        }
+
         public ActionResult Mapa()
         {
             return View();
@@ -23,7 +38,7 @@ namespace Net.Controllers
             return View();
         }
 
-        public ActionResult Historia()
+        public ActionResult Almanaque()
         {
             return View();
         }

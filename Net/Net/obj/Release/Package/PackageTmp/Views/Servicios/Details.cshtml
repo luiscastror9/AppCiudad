@@ -1,0 +1,41 @@
+﻿@model Net.Models.Servicios
+
+@{
+    ViewBag.Title = @Html.DisplayFor(model => model.Nombre);
+}
+
+<h2>@Html.DisplayFor(model => model.Nombre)</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contacto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contacto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modificar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Volver a la lista", "IndexAdmin")
+</p>

@@ -76,10 +76,12 @@ namespace Net.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Nombre,Correo,Fecha,Asunto,Mensaje")] Contacto contacto)
+        [ValidateInput(false)]
+        public ActionResult Create([Bind(Include = "Id,Nombre,Correo,Asunto,Mensaje")] Contacto contacto)
         {
             if (ModelState.IsValid)
             {
+                contacto.Fecha = DateTime.Now;
                 db.Contacto.Add(contacto);
                 db.SaveChanges();
                 return RedirectToAction("Create");
