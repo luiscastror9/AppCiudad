@@ -1,0 +1,42 @@
+﻿@model Net.Models.Mapa
+
+@{
+    ViewBag.Title = "Ver";
+}
+
+<h2>@Html.DisplayFor(model => model.Nombre)</h2>
+<hr />
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Latitud)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Latitud)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Logintud)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Logintud)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+    </dl>
+</div>
+<div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+    <div class="input-group">
+        <a class="btn btn-outline-info" href="~/Mapas/Index" role="button">Volver</a>
+    </div>
+</div>  

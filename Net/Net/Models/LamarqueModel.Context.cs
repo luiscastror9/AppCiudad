@@ -33,5 +33,6 @@ namespace Net.Models
         public virtual DbSet<Contacto> Contacto { get; set; }
         public virtual DbSet<Servicios> Servicios { get; set; }
         public virtual DbSet<Telefonos> Telefonos { get; set; }
+        public virtual DbSet<Mapa> Mapa { get; set; }
     }
 }

@@ -10,117 +10,114 @@ using Net.Models;
 
 namespace Net.Controllers
 {
-    public class TelefonosController : Controller
+    public class MapasController : Controller
     {
         private LamarqueBDEntities db = new LamarqueBDEntities();
 
-        // GET: Telefonos
+        // GET: Mapas
         public ActionResult Index()
         {
-            return View(db.Telefonos.ToList());
+            return View(db.Mapa.ToList());
         }
 
-        [Authorize(Roles = "Admin")]
-        public ActionResult IndexAdmin()
+        public ActionResult Mapa()
         {
-            return View(db.Telefonos.ToList());
+            return View();
         }
 
-        // GET: Telefonos/Details/5
-        [Authorize(Roles = "Admin")]
+        // GET: Mapas/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Telefonos telefonos = db.Telefonos.Find(id);
-            if (telefonos == null)
+            Mapa mapa = db.Mapa.Find(id);
+            if (mapa == null)
             {
                 return HttpNotFound();
             }
-            return View(telefonos);
+            return View(mapa);
         }
 
-        // GET: Telefonos/Create
-        [Authorize(Roles = "Admin")]
+        // GET: Mapas/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Telefonos/Create
+        // POST: Mapas/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Nombre,Telefono")] Telefonos telefonos)
+        [ValidateInput(false)]
+        public ActionResult Create([Bind(Include = "Id,Latitud,Logintud,Nombre,Descripcion")] Mapa mapa)
         {
             if (ModelState.IsValid)
             {
-                db.Telefonos.Add(telefonos);
+                db.Mapa.Add(mapa);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(telefonos);
+            return View(mapa);
         }
 
-        // GET: Telefonos/Edit/5
-        [Authorize(Roles = "Admin")]
+        // GET: Mapas/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Telefonos telefonos = db.Telefonos.Find(id);
-            if (telefonos == null)
+            Mapa mapa = db.Mapa.Find(id);
+            if (mapa == null)
             {
                 return HttpNotFound();
             }
-            return View(telefonos);
+            return View(mapa);
         }
 
-        // POST: Telefonos/Edit/5
+        // POST: Mapas/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nombre,Telefono")] Telefonos telefonos)
+        [ValidateInput(false)]
+        public ActionResult Edit([Bind(Include = "Id,Latitud,Logintud,Nombre,Descripcion")] Mapa mapa)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(telefonos).State = EntityState.Modified;
+                db.Entry(mapa).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(telefonos);
+            return View(mapa);
         }
 
-        // GET: Telefonos/Delete/5
-        [Authorize(Roles = "Admin")]
+        // GET: Mapas/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Telefonos telefonos = db.Telefonos.Find(id);
-            if (telefonos == null)
+            Mapa mapa = db.Mapa.Find(id);
+            if (mapa == null)
             {
                 return HttpNotFound();
             }
-            return View(telefonos);
+            return View(mapa);
         }
 
-        // POST: Telefonos/Delete/5
+        // POST: Mapas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Telefonos telefonos = db.Telefonos.Find(id);
-            db.Telefonos.Remove(telefonos);
+            Mapa mapa = db.Mapa.Find(id);
+            db.Mapa.Remove(mapa);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

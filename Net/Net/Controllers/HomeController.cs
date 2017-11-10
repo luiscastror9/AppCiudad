@@ -28,23 +28,18 @@ namespace Net.Controllers
             return View();
         }
 
-        public ActionResult Mapa()
-        {
-            return View();
-        }
-
         public ActionResult Clima()
         {
             return View();
         }
 
-        public ActionResult Almanaque()
+        public ActionResult Imagenes()
         {
             return View();
         }
 
         [Authorize(Roles = "Admin")]
-        public ActionResult Panel()
+        public ActionResult Administracion()
         {
             return View();
         }

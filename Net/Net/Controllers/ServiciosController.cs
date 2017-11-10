@@ -78,13 +78,14 @@ namespace Net.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Tipo,Nombre,Contacto")] Servicios servicios)
+        [ValidateInput(false)]
+        public ActionResult Create([Bind(Include = "Id,Tipo,Nombre,Contacto,Descripcion")] Servicios servicios)
         {
             if (ModelState.IsValid)
             {
                 db.Servicios.Add(servicios);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("IndexAdmin");
             }
 
             return View(servicios);
@@ -111,13 +112,14 @@ namespace Net.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Tipo,Nombre,Contacto")] Servicios servicios)
+        [ValidateInput(false)]
+        public ActionResult Edit([Bind(Include = "Id,Tipo,Nombre,Contacto,Descripcion")] Servicios servicios)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(servicios).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("IndexAdmin");
             }
             return View(servicios);
         }

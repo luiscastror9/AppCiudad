@@ -1,6 +1,7 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 
+
 .tamaño {
     width: 60% !important;
     margin: auto !important;
@@ -27,4 +28,18 @@
 
 .centro{
     margin:auto;
+}
+
+.login {
+    font-size: 1.125rem !important;
+    text-transform: uppercase !important;
+    font-family: 'Inconsolata', monospace !important;
+    color: #000000 !important;
+}
+    .login a {
+        text-decoration: none;
+    }
+
+.nosub{
+    text-decoration: none;
 }

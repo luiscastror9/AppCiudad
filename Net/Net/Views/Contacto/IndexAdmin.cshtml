@@ -4,46 +4,59 @@
     ViewBag.Title = "Mensajes";
 }
 
-<h2>Mensajes</h2>
-
-<table class="table">
-    <tr class="warning">
-        <th>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Correo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Fecha)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Asunto)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Correo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fecha)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Asunto)
-            </td>
-            <td>
-                @Html.ActionLink("Ver +", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
-            </td>
+<div class="form-row mb-3">
+    <div class="col-md-6 float-left">
+        <a class="btn btn-outline-info" href="~/Contacto/Create" role="button">Agregar</a>
+    </div>
+    <div class="col-md-6 float-right">
+        @using (Html.BeginForm("Buscar", "servicios_bd", FormMethod.Post, htmlAttributes: new { @class = "form-inline my-2 my-lg-0 float-right" }))
+            {
+            <form class="form-inline my-2 my-lg-0 float-right">
+                <input class="form-control mr-sm-2" name="busqueda_servicios" type="text" placeholder="Buscar">
+                <button id="busqueda" class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        }
+    </div>        
+</div>
+<div class="mb-5 d-flex">
+    <table class="table table-bordered table-responsive">
+        <tr class="table-info">
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Correo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asunto)
+            </th>
+            <th></th>
         </tr>
-    }
-
-</table>
-
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Correo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Asunto)
+                </td>
+                <td>
+                    @Html.ActionLink("Ver", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<div class="mb-5"><a href="~/Contacto/IndexAdmin" class="btn btn-outline-danger mx-auto d-block">Subir</a></div>

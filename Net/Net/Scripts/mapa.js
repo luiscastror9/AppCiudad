@@ -1,21 +1,4 @@
-﻿
-@{
-    ViewBag.Title = "Mapa";
-}
-
-<style>
-    #map {
-        height: 500px;
-        width: 100%;
-    }
-</style>
-
-<div id="map"></div>
-<hr />
-
-<script>
-
-        function initMap() {
+﻿function initMap() {
 
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 12,
@@ -55,6 +38,3 @@
             { lat: -39.423721, lng: -65.704867 },
             { lat: -39.423576, lng: -65.705235 },
         ]
-</script>
-<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_4_FdDOE6Niz_tKZ_tkeghRuf9EfWvd8&callback=initMap"></script>

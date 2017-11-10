@@ -4,32 +4,29 @@
     ViewBag.Title = "Roles";
 }
 
-<h2>Roles</h2>
-
-<div class="content col-md-4">
-
-
-    <table class="table table-striped table-bordered table-hover text-center">
-        <tr class="warning">
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-        </tr>
-
+<div class="list-group d-flex flex-row">
+    <div class="form-group col-md-4">
+        <a href="#" class="list-group-item list-group-item-action bg-danger border border-danger active text-center">
+            Roles
+        </a>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-            </tr>
+            <ul class="list-group">
+                <li class="list-group-item">@Html.DisplayFor(modelItem => item.Name)</li>
+
+            </ul>
         }
 
-    </table>
-    <p>
-        @Html.ActionLink("Crear", "CreateRole")
-    </p>
-    <p>
-        @Html.ActionLink("Asignar", "AddRoleToUser")
-    </p>
+    </div>
+    <div class="col-md-8 float-right">
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <a class="btn btn-outline-info" href="~/Manage/CreateRole" role="button">Nuevo Rol</a>
+            </div>
+            <div class="form-group col-md-2">
+                <a class="btn btn-outline-success" href="~/Manage/AddRoleToUser" role="button">Asignar Rol</a>
+            </div>
+        </div>
+    </div>
 </div>
+

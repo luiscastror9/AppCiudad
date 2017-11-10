@@ -1,40 +1,34 @@
 ﻿@model Net.Controllers.RoleViewModel
 
 @{
-    ViewBag.Title = "Agregar Rol";
+    ViewBag.Title = "Nuevo Rol";
 }
 
-<h2>Agregar Rol</h2>
-
+<div class="alert alert-info mb-3" role="alert">
+    <h3 class="text-center">Nuevo rol</h3>
+</div>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <hr />
+    <div>
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
         <div class="form-group">
-            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
-            </div>
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control mx-auto d-block", @placeholder = "Rol" } })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
         </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Agregar" class="btn btn-default" />
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <input type="submit" value="Enviar" class="btn btn-outline-info mx-auto d-block float-right" />
+            </div>
+            <div class="form-group col-md-6">
+                <a class="btn btn-outline-danger" href="~/Manage/Roles" role="button">Cancelar</a>
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Volver a la lista", "Roles")
-</div>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+

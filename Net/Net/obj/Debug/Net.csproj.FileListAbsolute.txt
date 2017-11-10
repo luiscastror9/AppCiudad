@@ -446,3 +446,4 @@ C:\Users\Matias\Documents\GitHub\Lamarque\Net\Net\bin\es\Microsoft.AspNet.Identi
 C:\Users\Matias\Documents\GitHub\Lamarque\Net\Net\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
 C:\Users\Matias\Documents\GitHub\Lamarque\Net\Net\obj\Debug\Net.dll
 C:\Users\Matias\Documents\GitHub\Lamarque\Net\Net\obj\Debug\Net.pdb
+C:\Users\Matias\Documents\GitHub\Lamarque\Net\Net\obj\Debug\Net.csprojResolveAssemblyReference.cache

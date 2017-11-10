@@ -72,6 +72,16 @@
     <Property Name="Asunto" Type="nvarchar" MaxLength="50" />
     <Property Name="Mensaje" Type="nvarchar" MaxLength="300" />
   </EntityType>
+  <EntityType Name="Mapa">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Latitud" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Logintud" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="Descripcion" Type="nvarchar(max)" />
+  </EntityType>
   <EntityType Name="Servicios">
     <Key>
       <PropertyRef Name="Id" />
@@ -80,6 +90,7 @@
     <Property Name="Tipo" Type="nvarchar" MaxLength="20" />
     <Property Name="Nombre" Type="nvarchar" MaxLength="20" />
     <Property Name="Contacto" Type="nvarchar" MaxLength="50" />
+    <Property Name="Descripcion" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Telefonos">
     <Key>
@@ -153,6 +164,7 @@
     <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Contacto" EntityType="Self.Contacto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mapa" EntityType="Self.Mapa" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Servicios" EntityType="Self.Servicios" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Telefonos" EntityType="Self.Telefonos" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">

@@ -111,13 +111,14 @@ namespace Net.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit([Bind(Include = "Id,Nombre,Correo,Fecha,Asunto,Mensaje")] Contacto contacto)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(contacto).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("IndexAdmin");
             }
             return View(contacto);
         }

@@ -71,6 +71,7 @@
     <EntitySetMapping Name="Servicios">
       <EntityTypeMapping TypeName="BDLamarqueModel.Servicios">
         <MappingFragment StoreEntitySet="Servicios">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Tipo" ColumnName="Tipo" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -95,5 +96,16 @@
         <ScalarProperty Name="Id" ColumnName="UserId" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="Mapa">
+      <EntityTypeMapping TypeName="BDLamarqueModel.Mapa">
+        <MappingFragment StoreEntitySet="Mapa">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Logintud" ColumnName="Logintud" />
+          <ScalarProperty Name="Latitud" ColumnName="Latitud" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

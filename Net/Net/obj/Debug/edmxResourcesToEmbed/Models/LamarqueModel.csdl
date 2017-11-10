@@ -78,6 +78,7 @@
     <Property Name="Tipo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Contacto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Telefonos">
     <Key>
@@ -140,5 +141,16 @@
       <End Role="AspNetRoles" EntitySet="AspNetRoles" />
       <End Role="AspNetUsers" EntitySet="AspNetUsers" />
     </AssociationSet>
+    <EntitySet Name="Mapa" EntityType="BDLamarqueModel.Mapa" />
   </EntityContainer>
+  <EntityType Name="Mapa">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Latitud" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Logintud" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

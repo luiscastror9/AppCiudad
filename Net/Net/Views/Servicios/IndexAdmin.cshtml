@@ -4,8 +4,10 @@
     ViewBag.Title = "Servicios";
 }
 
-<div class="form-control">
-     <a class="btn btn-outline-info" href="#" role="button">Agregar</a>
+<div class="float-left mb-3">
+    <a class="btn btn-outline-info" href="~/Servicios/Create" role="button">Agregar</a>
+</div>
+<div class="float-right mb-3">
     @using (Html.BeginForm("Buscar", "servicios_bd", FormMethod.Post, htmlAttributes: new { @class = "form-inline my-2 my-lg-0 float-right" }))
     {
         <form class="form-inline my-2 my-lg-0 float-right">
@@ -14,41 +16,49 @@
         </form>
     }
 </div>
-
-<table class="table table-hover table-bordered">
-    <tr class="table-info">
-        <th>
-            @Html.DisplayNameFor(model => model.Tipo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Contacto)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tipo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Contacto)
-            </td>
-            <td class="text-dark">
-                <a href="~/Views/Servicios/Edit.cshtml" class="text-dark">Modificar |</a>
-                <a href="~/Views/Servicios/Details.cshtml" class="text-dark">Ver |</a>
-                <a href="~/Views/Servicios/Delete.cshtml" class="text-dark">Eliminar</a>
-            </td>
+<div class="mb-5">
+    <table class="table table-bordered table-responsive">
+        <tr class="table-info">
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contacto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th></th>
         </tr>
-    }
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contacto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                    @Html.ActionLink("Modificar", "Edit", new { id = item.Id }) -
+                    @Html.ActionLink("Ver", "Details", new { id = item.Id }) -
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
 
-<a href="~/Servicios/Index" class="float-right">Subir</a>
+    </table>
+    
+</div>
+
+<div class="mb-5"><a href="~/Servicios/IndexAdmin" class="btn btn-outline-danger mx-auto d-block">Subir</a></div>

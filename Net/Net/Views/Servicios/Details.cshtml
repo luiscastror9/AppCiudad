@@ -1,41 +1,41 @@
 ﻿@model Net.Models.Servicios
 
 @{
-    ViewBag.Title = @Html.DisplayFor(model => model.Nombre);
+    ViewBag.Title = "Ver";
 }
 
 <h2>@Html.DisplayFor(model => model.Nombre)</h2>
-
+<hr />
 <div>
-    <hr />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Tipo)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Tipo)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Nombre)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Nombre)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Contacto)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Contacto)
         </dd>
-
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Modificar", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Volver a la lista", "IndexAdmin")
-</p>
+<div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+    <div class="input-group">
+        <a class="btn btn-outline-info" href="~/Servicios/IndexAdmin" role="button">Volver</a>
+    </div>
+</div>  

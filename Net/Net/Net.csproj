@@ -202,8 +202,8 @@
     <Compile Include="Controllers\ContactoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MapasController.cs" />
     <Compile Include="Controllers\ServiciosController.cs" />
-    <Compile Include="Controllers\TelefonosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -243,6 +243,9 @@
       <DependentUpon>LamarqueModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Mapa.cs">
+      <DependentUpon>LamarqueModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\resultado_contacto.cs" />
     <Compile Include="Models\resultado_servicios.cs" />
     <Compile Include="Models\Servicios.cs">
@@ -280,6 +283,14 @@
     <Content Include="Content\font-awesome\css\font-awesome.min.css" />
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="Content\Imagenes\Galeria\galeria1.jpg" />
+    <Content Include="Content\Imagenes\Galeria\galeria2.jpg" />
+    <Content Include="Content\Imagenes\Galeria\galeria3.jpg" />
+    <Content Include="Content\Imagenes\Galeria\galeria4.jpg" />
+    <Content Include="Content\Imagenes\Galeria\galeria5.jpg" />
+    <Content Include="Content\Imagenes\Galeria\galeria6.jpg" />
+    <Content Include="Content\Imagenes\Galeria\galeria7.jpg" />
+    <Content Include="Content\Imagenes\Galeria\galeria8.jpg" />
     <Content Include="Content\Imagenes\Historia\imgl.gif" />
     <Content Include="Content\Imagenes\Historia\imgr.gif" />
     <Content Include="Content\Imagenes\Home\Arriba.jpg" />
@@ -710,6 +721,8 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\mapa.js" />
+    <Content Include="Scripts\Modal.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
@@ -726,8 +739,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Panel.cshtml" />
-    <Content Include="Views\Home\Mapa.cshtml" />
+    <Content Include="Views\Home\Administracion.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -751,15 +763,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Manage\Roles.cshtml" />
     <Content Include="Views\Manage\CreateRole.cshtml" />
-    <Content Include="Views\Telefonos\Create.cshtml" />
-    <Content Include="Views\Telefonos\Delete.cshtml" />
-    <Content Include="Views\Telefonos\Details.cshtml" />
-    <Content Include="Views\Telefonos\Edit.cshtml" />
-    <Content Include="Views\Telefonos\Index.cshtml" />
     <Content Include="Views\Servicios\Create.cshtml" />
-    <Content Include="Views\Servicios\Delete.cshtml" />
-    <Content Include="Views\Servicios\Details.cshtml" />
-    <Content Include="Views\Servicios\Edit.cshtml" />
     <Content Include="Views\Servicios\Index.cshtml" />
     <Content Include="Views\Contacto\Delete.cshtml" />
     <Content Include="Views\Contacto\Details.cshtml" />
@@ -770,12 +774,21 @@
     <Content Include="Views\Contacto\IndexAdmin.cshtml" />
     <Content Include="Views\Home\Clima.cshtml" />
     <Content Include="Views\Home\Historia.cshtml" />
-    <Content Include="Views\Telefonos\IndexAdmin.cshtml" />
     <Content Include="Views\Manage\AddRoleToUser.cshtml" />
     <Content Include="Views\Home\Almanaque.cshtml" />
     <Content Include="Views\Contacto\Create.cshtml" />
     <Content Include="Views\Home\Museo.cshtml" />
     <Content Include="Views\Home\Fiesta_tomate.cshtml" />
+    <Content Include="Views\Servicios\Delete.cshtml" />
+    <Content Include="Views\Servicios\Edit.cshtml" />
+    <Content Include="Views\Servicios\Details.cshtml" />
+    <Content Include="Views\Mapas\Create.cshtml" />
+    <Content Include="Views\Mapas\Delete.cshtml" />
+    <Content Include="Views\Mapas\Details.cshtml" />
+    <Content Include="Views\Mapas\Edit.cshtml" />
+    <Content Include="Views\Mapas\Index.cshtml" />
+    <Content Include="Views\Mapas\Mapa.cshtml" />
+    <Content Include="Views\Home\Imagenes.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

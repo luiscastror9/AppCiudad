@@ -18,5 +18,6 @@ namespace Net.Models
         public string Tipo { get; set; }
         public string Nombre { get; set; }
         public string Contacto { get; set; }
+        public string Descripcion { get; set; }
     }
 }

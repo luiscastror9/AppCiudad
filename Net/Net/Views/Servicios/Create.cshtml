@@ -4,53 +4,51 @@
     ViewBag.Title = "Agregar";
 }
 
-<h2>Agregar</h2>
+<style>
+    input,
+    select,
+    textarea {
+        max-width: 1200px !important;
+    }
+</style>
+<script type="text/javascript" src="~/Scripts/ckeditor/ckeditor.js"></script>
 
-
+<div  class="mb-5">
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-
-    <div class="form-horizontal">
-        <h4>Servicio</h4>
-        <hr />
+    <form>
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.Tipo, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Tipo, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Tipo, "", new { @class = "text-danger" })
-            </div>
+            @Html.EditorFor(model => model.Tipo, new { htmlAttributes = new { @class = "form-control", @placeholder = "Tipo" } })
+            @Html.ValidationMessageFor(model => model.Tipo, "", new { @class = "text-danger" })
         </div>
-
         <div class="form-group">
-            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
-            </div>
+            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nombre" } })
+            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
         </div>
-
         <div class="form-group">
-            @Html.LabelFor(model => model.Contacto, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Contacto, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Contacto, "", new { @class = "text-danger" })
-            </div>
+            @Html.EditorFor(model => model.Contacto, new { htmlAttributes = new { @class = "form-control", @placeholder = "Contacto" } })
+            @Html.ValidationMessageFor(model => model.Contacto, "", new { @class = "text-danger" })
         </div>
-
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Agregar" class="btn btn-default" />
+            @Html.TextAreaFor(model => model.Descripcion, new { @id = "Descripcion", @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+            <script type="text/javascript">CKEDITOR.replace("Descripcion");</script>
+        </div>    
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <input type="submit" value="Enviar" class="btn btn-info float-right" />
+            </div>
+            <div class="form-group col-md-6">
+                <a class="btn btn-outline-info" href="~/Servicios/IndexAdmin" role="button">Cancelar</a>
             </div>
         </div>
-    </div>
+    </form>
 }
-
-<div>
-    @Html.ActionLink("Volver a la lista", "IndexAdmin")
 </div>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+
+<div class="mb-5"><a href="~/Servicios/IndexAdmin" class="btn btn-outline-danger mx-auto d-block">Subir</a></div>
